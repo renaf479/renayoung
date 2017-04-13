@@ -1,0 +1,29 @@
+{
+  "name": "renayoung",
+  "version": "1.0.0",
+  "description": "Portfolio site",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/renaf479/renayoung.git"
+  },
+  "author": "Serena Young",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/renaf479/renayoung/issues"
+  },
+  "homepage": "https://github.com/renaf479/renayoung#readme",
+  "devDependencies": {
+    "autoprefixer": "^6.7.7",
+    "gulp": "^3.9.1",
+    "gulp-connect": "^5.0.0",
+    "gulp-postcss": "^6.4.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.0",
+    "gulp-util": "^3.0.8",
+    "gulp-watch": "^4.3.11"
+  }
+}
