@@ -5,9 +5,16 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "scss": "node-sass --output-style compressed src/_scss/main.scss _site/css/main.css",
+    "scss": "node-sass --output-style compressed src/scss/main.scss _site/css/main.css",
     "autoprefixer": "postcss -u autoprefixer -r _site/css/*",
-    "build:css": "npm run scss && npm run autoprefixer"
+    "lint": "eslint src/js",
+    "uglify": "mkdir -p _site/js && uglifyjs src/js/*.js -m -o _site/js/app.js",
+    "build:css": "npm run scss && npm run autoprefixer && npm run watch:css",
+    "build:js": "npm run lint && npm run uglify && npm run watch:js",
+    "serve": "browser-sync start --server '_site' --files '_site/css/*.css, _site/js/*.js'",
+    "watch": "npm-run-all --parallel serve watch:*",
+    "watch:css": "onchange 'src/scss/*.scss' -- npm run build:css",
+    "watch:js": "onchange 'src/js/*.js' -- npm run build:js"
   },
   "repository": {
     "type": "git",
@@ -19,21 +26,21 @@
     "url": "https://github.com/renaf479/renayoung/issues"
   },
   "homepage": "https://github.com/renaf479/renayoung#readme",
+  "browserslist": [
+    "> 1%",
+    "last 2 versions"
+  ],
   "devDependencies": {
-    "autoprefixer": "^6.7.7",
-    "browser-sync": "^2.18.8",
-    "gulp": "3.9.1",
-    "gulp-connect": "5.0.0",
-    "gulp-plumber": "^1.1.0",
-    "gulp-postcss": "^6.4.0",
-    "gulp-sass": "3.1.0",
-    "gulp-sourcemaps": "2.6.0",
-    "gulp-util": "3.0.8",
-    "gulp-watch": "4.3.11",
-    "jshint": "^2.9.4",
-    "node-sass": "^4.5.2",
-    "postcss-cli": "^3.1.1",
-    "source-map": "^0.5.6",
-    "uglify-js": "^2.8.22"
+    "autoprefixer": "6.7.7",
+    "browser-sync": "2.18.8",
+    "eslint": "3.19.0",
+    "eslint-plugin-import": "2.2.0",
+    "eslint-plugin-node": "4.2.2",
+    "node-sass": "4.5.2",
+    "npm-run-all": "4.0.2",
+    "onchange": "3.2.1",
+    "postcss-cli": "3.1.1",
+    "source-map": "0.5.6",
+    "uglify-js": "2.8.22"
   }
 }

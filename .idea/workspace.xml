@@ -2,17 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="34414957-e1a9-461a-a178-987dad79aafc" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/_scss/_layout.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/_scss/_mixins.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/_scss/_variables.scss" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/_scss/main.scss" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/_sass/_layout.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/_sass/_mixins.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/_sass/_variables.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/_sass/main.scss" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/gulpfile.js" afterPath="$PROJECT_DIR$/gulpfile.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -342,7 +332,7 @@
       <workItem from="1492180851983" duration="29000" />
       <workItem from="1492180896163" duration="107000" />
       <workItem from="1492181014714" duration="38000" />
-      <workItem from="1492320839009" duration="16000" />
+      <workItem from="1492320839009" duration="55000" />
     </task>
     <task id="LOCAL-00001" summary="Wipe and using Solo theme for single page site">
       <created>1491805925070</created>
@@ -372,11 +362,18 @@
       <option name="project" value="LOCAL" />
       <updated>1492148891142</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Migrating to npm scripts">
+      <created>1492320877910</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1492320877910</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17106000" />
+    <option name="totallyTimeSpent" value="17145000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="1942" height="1056" extended-state="6" />
@@ -406,11 +403,14 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="Wipe and using Solo theme for single page site" />
     <MESSAGE value="Solo theme cleanup and adding base structure" />
     <MESSAGE value="Reconfiguring build process with gulp" />
     <MESSAGE value="More build process code" />
-    <option name="LAST_COMMIT_MESSAGE" value="More build process code" />
+    <MESSAGE value="Migrating to npm scripts" />
+    <option name="LAST_COMMIT_MESSAGE" value="Migrating to npm scripts" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
