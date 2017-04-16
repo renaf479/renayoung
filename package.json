@@ -4,7 +4,10 @@
   "description": "Portfolio site",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "node-sass --output-style compressed src/_scss/main.scss _site/css/main.css",
+    "autoprefixer": "postcss -u autoprefixer -r _site/css/*",
+    "build:css": "npm run scss && npm run autoprefixer"
   },
   "repository": {
     "type": "git",
@@ -17,7 +20,7 @@
   },
   "homepage": "https://github.com/renaf479/renayoung#readme",
   "devDependencies": {
-    "autoprefixer": "6.7.7",
+    "autoprefixer": "^6.7.7",
     "browser-sync": "^2.18.8",
     "gulp": "3.9.1",
     "gulp-connect": "5.0.0",
@@ -26,6 +29,11 @@
     "gulp-sass": "3.1.0",
     "gulp-sourcemaps": "2.6.0",
     "gulp-util": "3.0.8",
-    "gulp-watch": "4.3.11"
+    "gulp-watch": "4.3.11",
+    "jshint": "^2.9.4",
+    "node-sass": "^4.5.2",
+    "postcss-cli": "^3.1.1",
+    "source-map": "^0.5.6",
+    "uglify-js": "^2.8.22"
   }
 }

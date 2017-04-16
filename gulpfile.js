@@ -18,7 +18,7 @@ const
     dest = base + '_site/',
     paths = {
         js: src + '_js/',
-        scss: src + '_sass/',
+        scss: src + '_scss/',
         css: base + 'css/'
     },
     site = {
@@ -44,6 +44,15 @@ gulp.task('build-jekyll', (code) => {
     return child.spawn('jekyll', ['build', '--incremental'], { stdio: 'inherit' }) // Adding incremental reduces build time.
         .on('error', (error) => onError(gutil.colors.red(error.message)))
         .on('close', code);
+});
+
+//Javascript
+gulp.task('js', () => {
+    return gulp
+        .src(paths.js)
+        .pipe(sourcemaps.init())
+        .pipe
+    ;
 });
 
 //Sass
