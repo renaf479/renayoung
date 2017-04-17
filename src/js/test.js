@@ -1,4 +1,4 @@
-(function() {
+(function () {
 	console.log('here');
-	console.log('test2')
-})()
+	console.log('test2');
+})();
