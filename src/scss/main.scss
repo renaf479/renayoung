@@ -1,7 +1,16 @@
 @charset "utf-8";
 
-@import
-  'variables',
-  'mixins',
-  'layout'
-;
+@import 'abstracts/_variables';
+@import 'abstracts/_mixins';
+
+@import 'base/_reset';
+@import 'base/_typography';
+
+@import 'components/_buttons';
+
+@import 'layout/_header';
+@import 'layout/_navigation';
+
+@import 'pages/_about';
+@import 'pages/_works';
+@import 'pages/_contact';
