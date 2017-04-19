@@ -6,14 +6,14 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "npm-run-all build -p serve watch:*",
-    "autoprefixer": "postcss -u autoprefixer -r css/*.css",
+    "autoprefixer": "postcss -u autoprefixer -r css/*.css --map",
     "build:css": "npm run scss && npm run autoprefixer",
     "build:jekyll": "jekyll build",
     "build:js": "npm run lint && npm run uglify",
     "build": "npm-run-all -p build:css build:js -s build:jekyll",
     "lint": "eslint ./src/js || true",
     "lint-scss": "stylelint ./src/scss/*.scss --syntax scss || true",
-    "scss": "node-sass --output-style compressed ./src/scss/main.scss ./css/main.css",
+    "scss": "node-sass --output-style compressed --source-map-embed true ./src/scss/main.scss ./css/main.css",
     "serve": "browser-sync start --server './_site' --files './css/*.css, ./js/*.js' --no-open",
     "serve:reload": "browser-sync reload",
     "uglify": "mkdir -p js && uglifyjs ./src/js/*.js -m -o ./js/app.js",
@@ -49,5 +49,8 @@
     "source-map": "0.5.6",
     "stylelint": "^7.10.1",
     "uglify-js": "2.8.22"
+  },
+  "dependencies": {
+    "normalize.css": "^6.0.0"
   }
 }

@@ -3,6 +3,8 @@
 @import 'abstracts/_variables';
 @import 'abstracts/_mixins';
 
+@import 'vendors/_normalize';
+
 @import 'base/_reset';
 @import 'base/_typography';
 
@@ -10,6 +12,8 @@
 
 @import 'layout/_header';
 @import 'layout/_navigation';
+@import 'layout/_body';
+@import 'layout/_footer';
 
 @import 'pages/_about';
 @import 'pages/_works';
