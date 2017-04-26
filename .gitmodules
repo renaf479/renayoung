@@ -1,0 +1,4 @@
+[submodule "publish"]
+	path = publish
+	url = git@github.com:renaf479/renayoung.git
+	branch = gh-pages
