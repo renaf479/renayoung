@@ -1,4 +1,6 @@
 dist
+src/css
+src/js
 .sass-cache
 node_modules
 .idea
