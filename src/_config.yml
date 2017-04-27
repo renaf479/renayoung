@@ -1,0 +1,6 @@
+# Site settings
+title: Rena Young
+description: Portfolio Site
+
+# Build settings
+markdown: kramdown

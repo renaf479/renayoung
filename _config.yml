@@ -1,7 +1,0 @@
-# Site settings
-title: Rena Young
-description: Portfolio Site
-
-# Build settings
-markdown: kramdown
-exclude: ["README.md", "node_modules", "gulpfile._js", "package.json", "src"]
