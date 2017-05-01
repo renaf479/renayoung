@@ -3,16 +3,26 @@
     <head>
     {% include head.html %}
     </head>
-    <body>
-        <div id="about" class="about sections">
-          {% include about.html %}
-        </div>
-        <div id="works" class="works sections">
-          {% include works.html %}
-        </div>
-        <div id="contact" class="contact sections">
-          {% include contact.html %}
-        </div>
+    <body class="body">
+        <header>
+            <nav class="menu">
+                <a href="" class="menu">about</a>
+                <a href="">works</a>
+                <a href="">contact</a>
+            </nav>
+        </header>
+        <section>
+            <h1>Portfolio Site</h1>
+            <section id="about" class="about sections">
+              {% include about.html %}
+            </section>
+            <section id="works" class="works sections">
+              {% include works.html %}
+            </section>
+            <section id="contact" class="contact sections">
+              {% include contact.html %}
+            </section>
+        </section>
     {% include scripts.html %}
     </body>
 </html>
