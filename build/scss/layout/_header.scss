@@ -1,0 +1,15 @@
+.b-navigation {
+
+}
+
+.b-menu {
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  padding: 0;
+}
+
+.b-menu__item {
+  list-style: none;
+  margin: 0 12px;
+}

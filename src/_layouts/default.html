@@ -4,25 +4,47 @@
     {% include head.html %}
     </head>
     <body class="body">
-        <header>
-            <nav class="menu">
-                <a href="" class="menu">about</a>
-                <a href="">works</a>
-                <a href="">contact</a>
-            </nav>
-        </header>
-        <section>
-            <h1>Portfolio Site</h1>
-            <section id="about" class="about sections">
-              {% include about.html %}
+        <div id="b-site-wrapper">
+            <header>
+                <h1 class="b-logo">Portfolio Site</h1>
+                <menu class="b-navigation">
+                    <ul class="b-menu">
+                        <li class="b-menu__item">
+                            <a href="">about</a>
+                        </li>
+                        <li class="b-menu__item">
+                            <a href="">works</a>
+                        </li>
+                        <li class="b-menu__item">
+                            <a href="">contact</a>
+                        </li>
+                    </ul>
+                </menu>
+            </header>
+            <aside class="b-connect">
+                <nav>
+                    <ul class="b-social">
+                        <li class="b-social__link">
+                            <a href="">twitter</a>
+                        </li>
+                        <li class="b-social__link">
+                            <a href="">github</a>
+                        </li>
+                    </ul>
+                </nav>
+            </aside>
+            <section class="b-content">
+                <section id="about" class="b-content__section">
+                    {% include about.html %}
+                </section>
+                <section id="works" class="b-content__section">
+                    {% include works.html %}
+                </section>
+                <section id="contact" class="b-content__section">
+                    {% include contact.html %}
+                </section>
             </section>
-            <section id="works" class="works sections">
-              {% include works.html %}
-            </section>
-            <section id="contact" class="contact sections">
-              {% include contact.html %}
-            </section>
-        </section>
+        </div>
     {% include scripts.html %}
     </body>
 </html>
