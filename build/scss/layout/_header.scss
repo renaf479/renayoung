@@ -1,3 +1,13 @@
+#b-site-header {
+  display: flex;
+  flex-direction: row;
+}
+
+.b-logo {
+  flex-grow: 1;
+  margin: 0;
+}
+
 .b-navigation {
 
 }
@@ -12,4 +22,8 @@
 .b-menu__item {
   list-style: none;
   margin: 0 12px;
+
+  & > a {
+    text-decoration: none;
+  }
 }

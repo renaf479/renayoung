@@ -4,31 +4,25 @@
     {% include head.html %}
     </head>
     <body class="body">
+    {% include icons.svg %}
         <div id="b-site-wrapper">
-            <header>
-                <h1 class="b-logo">Portfolio Site</h1>
-                <menu class="b-navigation">
-                    <ul class="b-menu">
-                        <li class="b-menu__item">
-                            <a href="">about</a>
-                        </li>
-                        <li class="b-menu__item">
-                            <a href="">works</a>
-                        </li>
-                        <li class="b-menu__item">
-                            <a href="">contact</a>
-                        </li>
-                    </ul>
-                </menu>
-            </header>
+            {% include header.html %}
             <aside class="b-connect">
                 <nav>
                     <ul class="b-social">
                         <li class="b-social__link">
-                            <a href="">twitter</a>
+                            <a href="">
+                                <svg viewBox="0 0 16 16" class="icon">
+                                    <use xlink:href="#twitter"></use>
+                                </svg>
+                            </a>
                         </li>
                         <li class="b-social__link">
-                            <a href="">github</a>
+                            <a href="">
+                                <svg viewBox="0 0 16 16" class="icon">
+                                    <use xlink:href="#github"></use>
+                                </svg>
+                            </a>
                         </li>
                     </ul>
                 </nav>
