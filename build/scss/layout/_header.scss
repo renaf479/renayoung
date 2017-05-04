@@ -1,29 +1,9 @@
-#b-site-header {
+#site-header {
   display: flex;
   flex-direction: row;
 }
 
-.b-logo {
+.logo {
   flex-grow: 1;
   margin: 0;
-}
-
-.b-navigation {
-
-}
-
-.b-menu {
-  display: flex;
-  flex-direction: row;
-  margin: 0;
-  padding: 0;
-}
-
-.b-menu__item {
-  list-style: none;
-  margin: 0 12px;
-
-  & > a {
-    text-decoration: none;
-  }
 }

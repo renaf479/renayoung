@@ -4,37 +4,23 @@
     {% include head.html %}
     </head>
     <body class="body">
-    {% include icons.svg %}
-        <div id="b-site-wrapper">
-            {% include header.html %}
-            <aside class="b-connect">
-                <nav>
-                    <ul class="b-social">
-                        <li class="b-social__link">
-                            <a href="">
-                                <svg viewBox="0 0 16 16" class="icon">
-                                    <use xlink:href="#twitter"></use>
-                                </svg>
-                            </a>
-                        </li>
-                        <li class="b-social__link">
-                            <a href="">
-                                <svg viewBox="0 0 16 16" class="icon">
-                                    <use xlink:href="#github"></use>
-                                </svg>
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
+        <div class="hidden">{% include icons.svg %}</div>
+        <div id="site-wrapper">
+            <header id="site-header">
+                <h1 class="logo">Portfolio Site</h1>
+                {% include navigation.html %}
+            </header>
+            <aside class="connect">
+                {% include connect.html %}
             </aside>
-            <section class="b-content">
-                <section id="about" class="b-content__section">
+            <section class="content">
+                <section id="about" class="content__section">
                     {% include about.html %}
                 </section>
-                <section id="works" class="b-content__section">
+                <section id="works" class="content__section">
                     {% include works.html %}
                 </section>
-                <section id="contact" class="b-content__section">
+                <section id="contact" class="content__section">
                     {% include contact.html %}
                 </section>
             </section>

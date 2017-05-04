@@ -1,4 +1,53 @@
 .icon {
-  width: 24px;
-  height: 24px;
+  padding: 8px;
+  width: var(--icon-size);
+  height: var(--icon-size);
+  position: relative;
+
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    z-index: 0;
+    transition: opacity .2s, transform .2s;
+  }
+
+  &:before {
+    background-color: var(--icon-color-hover);
+    top: 0;
+    left: 0;
+    opacity: .2;
+    transform: scale(.9);
+  }
+
+  &:after {
+    padding: 3px;
+    top: -3px;
+    left: -3px;
+    box-shadow: 0 0 0 2px var(--icon-color-hover);
+    transform: scale(.6);
+    opacity: 0;
+  }
+
+  &:hover {
+    &:before,
+    &:after {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+}
+
+.icon__svg {
+  position: relative;
+  z-index: 10;
+  width: inherit;
+  height: inherit;
+}
+
+.svg__profile {
+  fill: red;
 }
