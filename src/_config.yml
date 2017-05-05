@@ -4,3 +4,4 @@ description: Portfolio Site
 
 # Build settings
 markdown: kramdown
+exclude: ['svg']
