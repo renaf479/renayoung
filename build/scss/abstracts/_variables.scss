@@ -1,9 +1,10 @@
 :root {
+  --color-black: #000000;
+  --color-white: #FDFDFD;
   --site-width: 1000px;
+  --site-bgColor: #1E2338;
+  --site-textColor: #E6ECF3;
   --icon-size: 32px;
-  --icon-color: #000000;
-  --icon-color-hover: #ffffff;
-
 }
 
 $xs: ( max:  767px );

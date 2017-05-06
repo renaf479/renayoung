@@ -1,5 +1,6 @@
 body {
-  background-color: lightcyan;
+  background-color: var(--site-bgColor);
+  color: var(--site-textColor);
 }
 
 menu {
