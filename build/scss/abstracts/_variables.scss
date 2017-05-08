@@ -1,10 +1,13 @@
 :root {
   --color-black: #000000;
   --color-white: #FDFDFD;
-  --site-width: 1000px;
+  --site-width: 800px;
   --site-bgColor: #1E2338;
   --site-textColor: #E6ECF3;
   --icon-size: 32px;
+  --icon-color-profile: #c58b8e;
+  --icon-color-works: #e57b5e;
+  --icon-color-contact: #4bb865;
 }
 
 $xs: ( max:  767px );
