@@ -1,6 +1,7 @@
 body {
-  background-color: var(--site-bgColor);
+  background: url(../images/background.jpg) no-repeat top center/cover;
   color: var(--site-textColor);
+  height: 100vh;
 }
 
 menu {
