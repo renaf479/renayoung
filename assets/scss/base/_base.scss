@@ -1,0 +1,22 @@
+body {
+  background: url(../images/background.jpg) no-repeat top center/cover;
+  color: var(--site-textColor);
+  height: 100vh;
+}
+
+menu {
+  margin: 0;
+  padding: 0;
+}
+
+.hidden {
+  display: none;
+}
+
+.link--nostyle {
+  text-decoration: none;
+}
+
+.list__item--nostyle {
+  list-style: none;
+}
