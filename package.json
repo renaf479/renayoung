@@ -16,8 +16,6 @@
     "clean": "rm -rf ./src/js ./src/css ./src/images ./src/assets",
     "clean:publish": "rm -rf ./publish/*.*",
     "copy:assets": "mkdir -p ./dist/assets && cp -R ./assets ./dist",
-    "copy:css": "mkdir -p ./dist/css/build/scss && cp -R ./assets/scss ./dist/css/build/",
-    "copy:js": "mkdir -p ./dist/js/build/js && cp -R ./assets/js ./dist/js/build/",
     "copy:publish": "cp -R ./dist/* ./publish",
     "lint": "eslint assets/js || true",
     "lint-scss": "stylelint ./src/scss/*.scss --syntax scss || true",
@@ -28,7 +26,7 @@
     "svg": "svgo -f assets/svg -o src/svg && svg-sprite-generate -d src/svg -o src/_includes/icons.svg",
     "uglify": "mkdir -p ./src/js && uglifyjs ./assets/js/*.js -m -o src/js/app.js --source-map src/js/app.js.map --source-map-url app.js.map",
     "watch:css": "onchange 'assets/scss/**/*.scss' -- npm run build:css",
-    "watch:jekyll": "onchange './src/index.md' './src/_includes/*' './src/_layouts/*.html' './src/css/*.css' './src/js/*.js' -- npm-run-all build:jekyll -p copy:css copy:js serve:reload",
+    "watch:jekyll": "onchange './src/index.md' './src/_includes/*' './src/_layouts/*.html' './src/css/*.css' './src/js/*.js' -- npm-run-all build:jekyll -p copy:assets serve:reload",
     "watch:js": "onchange 'assets/js/**/*.js' -- npm run build:js",
     "watch:svg": "onchange 'assets/svg/**/*.svg' -- npm run build:svg"
   },

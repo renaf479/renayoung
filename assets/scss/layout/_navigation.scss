@@ -9,12 +9,22 @@
   padding: 0;
 }
 
-.menu__item {
-}
-
-.menu__link {
-}
-
 .menu__icon {
+  background-color: currentColor;
+}
 
+.menu__icon__profile {
+  color: var(--icon-color-profile);
+}
+
+.menu__icon__works {
+  color: var(--icon-color-works);
+}
+
+.menu__icon__contact {
+  color: var(--icon-color-contact);
+}
+
+.menu__text {
+  display: none;
 }

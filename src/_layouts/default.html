@@ -6,13 +6,10 @@
     <body class="body">
         <div class="hidden">{% include icons.svg %}</div>
         <div id="site__wrapper">
-            <h1 class="logo">Portfolio Site</h1>
             <header id="site__header">
+                <h1 class="logo">Portfolio Site</h1>
                 {% include navigation.html %}
             </header>
-            <aside id="site__connect">
-                {% include connect.html %}
-            </aside>
             <section class="content">
                 <section id="about" class="content__section">
                     {% include about.html %}
@@ -23,6 +20,21 @@
                 <section id="contact" class="content__section">
                     {% include contact.html %}
                 </section>
+
+                <div class="site__canvas">
+                    <div class="canvas__top">
+                        <aside id="site__connect" class="canvas__top__left">
+                            {% include connect.html %}
+                        </aside>
+                        <div class="canvas__top__right"></div>
+                    </div>
+                    <div class="canvas__middle">
+                        <div class="canvas__middle__left"></div>
+                        <div id="site__pagination" class="canvas__middle__right"></div>
+                    </div>
+                    <div class="canvas__bottom">
+                    </div>
+                </div>
             </section>
         </div>
     {% include scripts.html %}

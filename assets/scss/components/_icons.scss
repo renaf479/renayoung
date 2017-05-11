@@ -17,6 +17,9 @@
   border-radius: 100%;
   border: 2px solid var(--color-white);
   background-color: var(--color-black);
+  box-shadow: 0 0 6px 3px rgba($white, .3);
+  opacity: .86;
+  transition: opacity .35s;
 
   &:before,
   &:after {
@@ -39,6 +42,8 @@
   }
 
   &:hover {
+    opacity: 1;
+
     &:before {
       border-top-color: currentColor;
       border-right-color: currentColor;
