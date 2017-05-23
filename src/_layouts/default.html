@@ -6,36 +6,22 @@
     <body class="body">
         <div class="hidden">{% include icons.svg %}</div>
         <div id="site__wrapper">
-            <header id="site__header">
-                <h1 class="logo">Portfolio Site</h1>
-                {% include navigation.html %}
-            </header>
-            <section class="content">
-                <section id="about" class="content__section">
-                    {% include about.html %}
+            {% include navigation.html %}
+<!--                <header id="site__header">
+                    <h1 class="logo">Portfolio Site</h1>
+                </header>-->
+            <div id="site__canvas">
+                <section class="content">
+                    <section id="about" class="content__section">
+                    </section>
+                    <section id="works" class="content__section">
+                        {% include works.html %}
+                    </section>
+                    <section id="contact" class="content__section">
+                        {% include contact.html %}
+                    </section>
                 </section>
-                <section id="works" class="content__section">
-                    {% include works.html %}
-                </section>
-                <section id="contact" class="content__section">
-                    {% include contact.html %}
-                </section>
-
-                <div class="site__canvas">
-                    <div class="canvas__top">
-                        <aside id="site__connect" class="canvas__top__left">
-                            {% include connect.html %}
-                        </aside>
-                        <div class="canvas__top__right"></div>
-                    </div>
-                    <div class="canvas__middle">
-                        <div class="canvas__middle__left"></div>
-                        <div id="site__pagination" class="canvas__middle__right"></div>
-                    </div>
-                    <div class="canvas__bottom">
-                    </div>
-                </div>
-            </section>
+            </div>
         </div>
     {% include scripts.html %}
     </body>

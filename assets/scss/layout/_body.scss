@@ -5,6 +5,7 @@ body {
 }
 
 #site__wrapper {
+  background-color: rgba($white, .6);
   max-width: var(--site-width);
   width: 100%;
   height: 100vh;
@@ -14,73 +15,22 @@ body {
   position: relative;
 }
 
-#site__header {
-  position: absolute;
-  top: 0;
-  right: 0;
+#site__canvas {
+  --canvas-top-margin: 43px;
+
   display: flex;
-  flex-direction: row;
-  z-index: 100;
+  background-color: rgba($black, .8);
+  position: absolute;
+  border-radius: 100px 2px 0 0;
+  margin: var(--canvas-top-margin) 2px 0 11px;
+  width: calc(100% - 13px);
+  height: calc(100% - var(--canvas-top-margin));
 }
 
 .content {
   position: relative;
-  margin: 32px 0 8px;
   flex-grow: 1;
+  margin: 0 -25px;
+
+  background-color: rgba(gray, .5);
 }
-
-.site__canvas {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  z-index: 0;
-}
-
-.canvas__top {
-  height: 150px;
-  display: flex;
-}
-
-.canvas__top__left {
-  width: 56px;
-}
-
-.canvas__top__right {
-  flex-grow: 1;
-  background-color: rgba($white, .2);
-}
-
-.canvas__middle {
-  display: flex;
-  min-height: 125px;
-}
-
-.canvas__middle__left {
-  flex-grow: 1;
-  background-color: rgba($white, .2);
-}
-
-.canvas__middle__right {
-  width: 32px;
-}
-
-.canvas__bottom {
-  min-height: 24px;
-  flex-grow: 1;
-  background-color: rgba($white, .2);
-}
-
-/*
-
-
-.content {
-  height: inherit;
-
-}
-
-.content__section {
-}*/

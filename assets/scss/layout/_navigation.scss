@@ -1,10 +1,14 @@
 .navigation {
   text-transform: uppercase;
+  z-index: 1000;
+  position: relative;
+  right: -20px;
 }
 
 .menu {
   display: flex;
   flex-direction: row;
+  justify-content: flex-end;
   margin: 0;
   padding: 0;
 }
