@@ -4,7 +4,11 @@
   "description": "Portfolio site",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "css:build": "node-sass --source-map=true --output-style compressed './themes/renayoung/static-src/src-assets/sass/**/*.{scss,sass}' -o './themes/renayoung/static/assets/css'",
+    "postcss:build": "autoprefixer -b ./themes/renayoung/static/assets/css/*.css",
+
+
+
     "start": "npm-run-all clean build -p serve watch:*",
     "publish": "npm-run-all clean build",
     "build": "npm-run-all -p build:css build:js build:svg build:images -s build:jekyll -p copy:assets",
@@ -20,7 +24,6 @@
     "lint": "eslint assets/js || true",
     "lint-scss": "stylelint ./src/scss/*.scss --syntax scss || true",
     "postcss": "postcss -u autoprefixer -b < src/css/main.css | postcss -u cssnano > src/css/main.min.css",
-    "sass": "node-sass assets/scss/main.scss --output=src/css/ --source-map=true ",
     "serve": "browser-sync start --server './dist' --no-open",
     "serve:reload": "browser-sync reload",
     "svg": "svgo -f assets/svg -o src/svg && svg-sprite-generate -d src/svg -o src/_includes/icons.svg",

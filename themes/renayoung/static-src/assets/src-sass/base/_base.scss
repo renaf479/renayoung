@@ -1,0 +1,20 @@
+body {
+  color: var(--site-textColor);
+}
+
+menu {
+  margin: 0;
+  padding: 0;
+}
+
+.hidden {
+  display: none;
+}
+
+.link--nostyle {
+  text-decoration: none;
+}
+
+.list__item--nostyle {
+  list-style: none;
+}
