@@ -4,8 +4,18 @@
   "description": "Portfolio site",
   "main": "app.js",
   "scripts": {
-    "css:build": "node-sass --source-map=true --output-style compressed './themes/renayoung/static-src/src-assets/sass/**/*.{scss,sass}' -o './themes/renayoung/static/assets/css'",
-    "postcss:build": "autoprefixer -b ./themes/renayoung/static/assets/css/*.css",
+    "css:sass": "node-sass ./themes/renayoung/static-src/assets/src-sass/main.scss -o ./themes/renayoung/static-src/assets/src-sass/ --source-map=true",
+    "css:postcss": "postcss -u autoprefixer -b < ./themes/renayoung/static-src/assets/src-sass/main.css | postcss -u cssnano > ./themes/renayoung/static/assets/css/main.min.css",
+    "css:build": "npm run css:sass && npm run css:postcss",
+    "css:watch": "onchange './themes/renayoung/static-src/assets/src-sass/**/*.scss' -- npm run css:build",
+    "js:lint": "eslint ./themes/renayoung/static-src/assets/src-js/ || true",
+    "js:uglfy": "uglifyjs ./themes/renayoung/static-src/assets/src-js/**/*.js -m -o ./themes/renayoung/static/assets/js/app.js --source-map ./themes/renayoung/static/assets/js/app.js.map --source-map-url app.js/map",
+    "js:build": "npm run js:ling && npm run js:uglify",
+    "js:watch": "onchange './themes/renayoung/static-src/assets/src-js/**/*.js' -- npm run js:build",
+    "svg:compress": "svgo -f ./themes/renayoung/static-src/assets/src-svg/raw -o ./themes/renayoung/static-src/assets/src-svg/compressed",
+    "svg:sprite": "svg-sprite-generate -d ./themes/renayoung/static-src/assets/src-svg/compressed -o ./themes/renayoung/static/assets/svg/icons.svg",
+    "svg:build": "npm run svg:compress && npm run svg:sprite",
+    "svg:watch": "onchange './themes/renayoung/static-src/assets/src-svg/raw/**/*.svg' -- npm run svg:build",
 
 
 
