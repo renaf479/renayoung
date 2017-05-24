@@ -1,5 +1,0 @@
----
-layout: about
----
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum euismod metus ut purus commodo egestas. Nullam rhoncus et lectus eu mollis. Curabitur convallis imperdiet purus, ac condimentum velit rutrum quis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed lobortis et neque at eleifend. Cras at tempor ante. Nulla lobortis purus sed mauris porttitor eleifend. Sed tempus est eu orci mattis gravida. Pellentesque quis lobortis nunc. Curabitur egestas, tortor eu suscipit lobortis, eros sapien hendrerit lectus, a viverra mi justo et eros. Pellentesque hendrerit, tellus molestie cursus aliquam, quam turpis ornare ex, vel efficitur urna ante quis nunc. Vivamus sed finibus felis, at malesuada ex. Quisque arcu diam, facilisis ac ipsum vel, efficitur egestas felis. Vestibulum a lorem sed eros molestie consectetur sit amet eget enim. Cras fringilla sapien nisi, interdum porttitor diam laoreet et.
