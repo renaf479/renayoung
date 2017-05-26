@@ -6,5 +6,8 @@ src/svg
 node_modules
 .idea
 npm-debug.log
-themes/renayoung/static-src/assets/src-sass/*.css*
-themes/renayoung/static-src/assets/src-svg/compressed
+public
+static/assets/css
+static/assets/js
+static/assets/svg
+static-src/assets/src-svg/compressed
