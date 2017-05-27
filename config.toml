@@ -2,3 +2,4 @@ theme = "renayoung"
 baseURL = "http://www.renayoung.com/"
 title = "Rena Young"
 languageCode = "en-us"
+ignoreFiles = ["\\static-src$"]

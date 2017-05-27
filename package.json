@@ -4,10 +4,11 @@
   "description": "Portfolio site",
   "main": "app.js",
   "scripts": {
-    "start": "npm run assets:build && hugo server && npm-run-all css:watch js:watch svg:watch",
+    "start": "npm run assets:build && npm-run-all -p css:watch js:watch svg:watch run:hugo",
     "assets:clean": "rm -rf ./static/assets/js/* static/assets/css/* static-src/assets/src-svg/compressed/*",
     "assets:build": "npm run assets:clean && npm-run-all css:build js:build svg:build",
     "build": "npm run assets:build && hugo",
+    "run:hugo": "hugo server",
     "css:sass": "node-sass ./static-src/assets/src-sass/main.scss -o ./static/assets/css/ --source-map=true",
     "css:postcss": "postcss -u autoprefixer -b < ./static/assets/css/main.css | postcss -u cssnano --sourcemap > ./static/assets/css/main.min.css",
     "css:build": "npm run css:sass && npm run css:postcss",
