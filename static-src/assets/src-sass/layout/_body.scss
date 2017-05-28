@@ -7,21 +7,34 @@ body {
   width: 100%;
   height: 100vh;
   margin: 0 auto;
+  position: relative;
 }
 
-.site__content {
-  margin: -40px;
+.section__bg {
+  position: absolute;
+  height: inherit;
+  width: inherit;
+}
+
+.section__content {
+  position: absolute;
+  height: inherit;
+  top: 0;
+  margin: 0 -40px;
+  z-index: 200;
+  overflow: auto;
 }
 
 .site__landing {
-  @include angle(after);
   background-color: lightcoral;
-  z-index: 20;
 }
 
 .site__about {
-  @include angle(both, true);
-  background-color: lightgreen;
+
+  .section__bg {
+    @include angle(both, true);
+    background-color: lightgreen;
+  }
 }
 
 .site__works {
