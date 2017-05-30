@@ -27,12 +27,13 @@ body {
 
 .site__landing {
   background-color: lightcoral;
+  max-width: none;
 }
 
 .site__about {
 
   .section__bg {
-    @include angle(both, true);
+    //@include angle(both, true);
     background-color: lightgreen;
   }
 }

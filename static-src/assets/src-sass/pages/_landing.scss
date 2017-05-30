@@ -1,0 +1,23 @@
+#landing {
+  background: var(--landing-color-primary);
+  background: linear-gradient(to top, var(--landing-color-primary), var(--landing-color-secondary));
+}
+
+.landing__nav {
+  display: grid;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  grid-template-columns: 70px 200px 70px;
+  grid-template-rows: 200px 30px;
+}
+
+.landing__bioPic {
+  background: url("/assets/images/profile-pic.jpg") -13px 0;
+  clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+}
+
+.landing-svg__about {
+}
