@@ -51,14 +51,12 @@
     "onchange": "3.2.1",
     "postcss-cli": "3.1.1",
     "rollup": "^0.41.6",
+    "rollup-plugin-node-resolve": "^3.0.0",
+    "normalize.css": "^6.0.0",
     "source-map": "0.5.6",
     "stylelint": "^7.10.1",
     "svg-sprite-generator": "0.0.7",
     "svgo": "^0.7.2",
     "uglify-js": "2.8.22"
-  },
-  "dependencies": {
-    "normalize.css": "^6.0.0",
-    "snapsvg": "^0.5.1"
   }
 }

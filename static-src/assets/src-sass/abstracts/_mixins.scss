@@ -70,3 +70,29 @@
     }
   }
 }
+
+@mixin triangle() {
+  position: absolute;
+
+  &:before {
+
+  }
+
+
+  .triangle {
+    position: absolute;
+    margin: auto;
+    top: -70px;
+    left: 0;
+    right: 0;
+    width: 137px;
+    height: 137px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    border-right: 4px solid #e74c3c;
+    border-bottom: 4px solid #e74c3c;
+  }
+}

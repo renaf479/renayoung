@@ -10,14 +10,46 @@
   left: 50%;
   transform: translate(-50%, -50%);
 
-  grid-template-columns: 70px 200px 70px;
-  grid-template-rows: 200px 30px;
+  grid-template-columns: 70px 70px 70px;
+  grid-template-rows: 70px 140px 70px;
+  grid-template-areas:
+    'pic pic pic'
+    'about logo works'
+    'contact contact contact';
 }
 
-.landing__bioPic {
-  background: url("/assets/images/profile-pic.jpg") -13px 0;
-  clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+//TEMP!
+.landing-nav__item > svg {
+  width: 70px;
+  display: block;
+  margin: auto;
 }
 
 .landing-svg__about {
 }
+
+.landing__pic {
+  grid-area: pic;
+  grid-column: 2 / span 1;
+}
+
+.landing__about {
+  grid-area: about;
+}
+
+.landing__logo {
+  grid-area: logo;
+  background: red 140px 140px;
+  clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+}
+
+.landing__works {
+  grid-area: works;
+}
+
+.landing__contact {
+  grid-area: contact;
+  grid-column: 2 / span 1;
+}
+
+
