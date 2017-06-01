@@ -1,0 +1,53 @@
+.bgLayer {
+  position: absolute;
+  left: 50%;
+  width: 2000px;
+  transform: translate(-50%, 0);
+}
+
+.bgLayer__section {
+  position: absolute;
+  left: 0;
+  width: 100%;
+}
+
+.bgLayer__triangle {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+.bgLayer__triangle--left {
+  left: 0;
+  border-width: 1000px 0 1000px 1000px;
+  border-color: transparent transparent transparent black;
+}
+
+
+.bgLayer__triangle--right {
+  right: 0;
+  border-width: 1000px 1000px 1000px 0;
+  border-color: transparent $white transparent transparent;
+}
+
+.bgLayer__landing {
+  top: 0;
+  height: 1000px;
+  background: var(--landing-color-primary);
+  background: linear-gradient(to top, var(--landing-color-primary), var(--landing-color-secondary));
+}
+
+.bgLayer__about {
+  top: 100px;
+  height: 1000px;
+
+  .bgLayer__triangle--left {
+    top: 200px;
+    border-width: 1000px 0 1000px 2000px;
+    z-index: 100;
+  }
+
+  .bgLayer__triangle--right {
+  }
+}

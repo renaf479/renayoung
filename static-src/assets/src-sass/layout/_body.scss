@@ -1,7 +1,14 @@
 body {
-  background-color: gray;
+  overflow-x: hidden;
 }
 
+.site__wrapper {
+  max-width: 2000px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+/*
 .site__section {
   max-width: 900px;
   width: 100%;
@@ -46,4 +53,4 @@ body {
 .site__contact {
   @include angle(before, true);
   background-color: lightgoldenrodyellow;
-}
+}*/
