@@ -1,8 +1,10 @@
 .bgLayer {
   position: absolute;
   left: 50%;
-  width: 2000px;
+  width: 1000px;
+  height: 2700px;
   transform: translate(-50%, 0);
+  background: white;
 }
 
 .bgLayer__section {
@@ -11,43 +13,53 @@
   width: 100%;
 }
 
-.bgLayer__triangle {
-  position: absolute;
-  width: 0;
-  height: 0;
-  border-style: solid;
-}
-
-.bgLayer__triangle--left {
-  left: 0;
-  border-width: 1000px 0 1000px 1000px;
-  border-color: transparent transparent transparent black;
-}
-
-
-.bgLayer__triangle--right {
-  right: 0;
-  border-width: 1000px 1000px 1000px 0;
-  border-color: transparent $white transparent transparent;
-}
-
 .bgLayer__landing {
+  outline: 1px solid red;
   top: 0;
-  height: 1000px;
-  background: var(--landing-color-primary);
+  height: 900px;
+  //background: var(--landing-color-primary);
   background: linear-gradient(to top, var(--landing-color-primary), var(--landing-color-secondary));
 }
 
 .bgLayer__about {
-  top: 100px;
+  outline: 1px solid green;
+  top: 500px;
+  height: 800px;
+}
+
+.bgLayer__about__slant {
+  height: 400px;
+  transform: skewY(20deg);
+  background: gray;
+  transform-origin: 0% 100%;
+  z-index: 100;
+}
+
+.bgLayer__works {
+  outline: 1px solid blue;
+  top: 1400px;
+  height: 800px;
+}
+
+.bgLayer__works__slant {
+  height: 400px;
+  transform: skewY(-20deg);
+  background: gray;
+  transform-origin: 100% 0;
+  z-index: 100;
+}
+
+.bgLayer__contact {
+  top: 1770px;
   height: 1000px;
+  outline: 4px solid purple;
+  background-color: darkred;
+}
 
-  .bgLayer__triangle--left {
-    top: 200px;
-    border-width: 1000px 0 1000px 2000px;
-    z-index: 100;
-  }
-
-  .bgLayer__triangle--right {
-  }
+.bgLayer__contact__slant {
+  height: 300px;
+  transform: skewY(-20deg);
+  background: white;
+  transform-origin: 100% 0;
+  z-index: 60;
 }
