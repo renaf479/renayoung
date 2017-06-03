@@ -1,65 +1,73 @@
-.bgLayer {
-  position: absolute;
-  left: 50%;
-  width: 1000px;
-  height: 2700px;
-  transform: translate(-50%, 0);
-  background: white;
-}
-
-.bgLayer__section {
+%bgLayer__section {
   position: absolute;
   left: 0;
   width: 100%;
 }
 
-.bgLayer__landing {
-  outline: 1px solid red;
-  top: 0;
-  height: 900px;
-  //background: var(--landing-color-primary);
-  background: linear-gradient(to top, var(--landing-color-primary), var(--landing-color-secondary));
-}
-
-.bgLayer__about {
-  outline: 1px solid green;
-  top: 500px;
-  height: 800px;
-}
-
-.bgLayer__about__slant {
+%bgLayer__slant {
   height: 400px;
   transform: skewY(20deg);
-  background: gray;
+  background-color: var(--bgLayer-slant);
+  box-shadow: 0px 0px 8px 2px rgba(0,0,0,0.5);
   transform-origin: 0% 100%;
   z-index: 100;
 }
 
-.bgLayer__works {
-  outline: 1px solid blue;
-  top: 1400px;
-  height: 800px;
+.bgLayer {
+  position: absolute;
+  left: 50%;
+  width: var(--site-width);
+  height: var(--site-height);
+  transform: translate(-50%, 0);
+  background-color: var(--white);
+  overflow: hidden;
+  z-index: 0;
 }
 
-.bgLayer__works__slant {
-  height: 400px;
-  transform: skewY(-20deg);
-  background: gray;
-  transform-origin: 100% 0;
+.bgLayer__landing {
+  @extend %bgLayer__section;
+  top: var(--landing-top);
+  height: var(--landing-height);
+  background: var(--bgLayer-landing);
+  background: linear-gradient(to top, var(--bgLayer-landing), var(--bgLayer-landing-secondary));
+  z-index: 10;
+}
+
+.bgLayer__about {
+  @extend %bgLayer__section;
+  top: var(--about-top);
+  height: var(--about-height);
   z-index: 100;
 }
 
-.bgLayer__contact {
-  top: 1770px;
-  height: 1000px;
-  outline: 4px solid purple;
-  background-color: darkred;
+.bgLayer__slant--se {
+  @extend %bgLayer__slant;
+  transform: skewY(20deg);
+  transform-origin: 0% 100%;
 }
 
-.bgLayer__contact__slant {
-  height: 300px;
+.bgLayer__works {
+  @extend %bgLayer__section;
+  top: var(--works-top);
+  height: var(--works-height);
+  z-index: 100;
+}
+
+.bgLayer__slant--sw {
+  @extend %bgLayer__slant;
   transform: skewY(-20deg);
-  background: white;
   transform-origin: 100% 0;
-  z-index: 60;
+}
+
+.bgLayer__contact {
+  @extend %bgLayer__section;
+  top: var(--contact-top);
+  height: var(--contact-height);
+  background: linear-gradient(to top, var(--bgLayer-contact), var(--bgLayer-contact-secondary));
+  z-index: 10;
+
+  .bgLayer__slant--sw {
+    height: 300px;
+    background-color: var(--white);
+  }
 }

@@ -1,0 +1,13 @@
+.site__footer {
+  position: absolute;
+  bottom: -12px;
+  right: -24px;
+  transform: rotate(90deg);
+  transform-origin: 100% 0;
+}
+
+.footer__copyright {
+  text-align: center;
+  font-style: italic;
+  font-size: .5em;
+}

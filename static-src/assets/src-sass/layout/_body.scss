@@ -1,12 +1,19 @@
 body {
-  overflow-x: hidden;
-  background-color: black;
+  background: var(--black);
 }
 
 .site__wrapper {
-  max-width: 2000px;
+  max-width: var(--site-width);
+  height: var(--site-height);
   margin: 0 auto;
-  overflow: hidden;
+  position: relative;
+}
+
+.site__content {
+  position: relative;
+  height: inherit;
+  width: inherit;
+  z-index: 100;
 }
 
 /*
