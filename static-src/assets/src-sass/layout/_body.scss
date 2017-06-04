@@ -16,6 +16,11 @@ body {
   z-index: 100;
 }
 
+.site__section {
+  position: absolute;
+  width: 100%;
+}
+
 /*
 .site__section {
   max-width: 900px;

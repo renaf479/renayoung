@@ -1,0 +1,36 @@
+#landing {
+  height: var(--landing-height);
+  top: var(--landing-top);
+}
+
+.site__landing {
+
+  .list__navigation {
+  }
+
+  .svg {
+    position: absolute;
+    width: 100px;
+  }
+
+  .svg__profile {
+    left: 50%;
+    transform: translate(-50%, 0);
+    animation: profile 1.4s ease-out forwards;
+  }
+
+  .svg__works {
+    transform: translate(0, 50%);
+    animation: works 1.4s ease-out forwards;
+  }
+}
+
+@keyframes profile {
+  0% {top: -25%;}
+  100% {top: 20%;}
+}
+
+@keyframes works {
+  0% {left: -25%; bottom: 100px; }
+  100% {left: 25%; bottom: 600px; }
+}

@@ -7,14 +7,19 @@ menu {
   padding: 0;
 }
 
+.list--nostyle {
+  margin: 0;
+  padding: 0;
+}
+
+.list__item--nostyle {
+  list-style: none;
+}
+
 .hidden {
   display: none;
 }
 
 .link--nostyle {
   text-decoration: none;
-}
-
-.list__item--nostyle {
-  list-style: none;
 }
