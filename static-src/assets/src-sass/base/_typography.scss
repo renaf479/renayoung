@@ -1,3 +1,13 @@
+@font-face {
+  font-family: "Monda";
+  src: url("../fonts/Monda-Regular.ttf");
+}
+@font-face {
+  font-family: "Monda";
+  src: url("../fonts/Monda-Bold.ttf");
+  font-weight: bold;
+}
+
 html {
-  font-family: Verdana;
+  font-family: "Monda";
 }

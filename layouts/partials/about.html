@@ -1,0 +1,6 @@
+<section id="about" class="site__about site__section">
+    {{ range where .Data.Pages "Section" "about" | first 1 }}
+    <h1 class="site-about__title section__title" data-content="{{ .Title }}">{{ .Title }}</h1>
+    <p>{{ .Content }}
+    {{ end }}
+</section>

@@ -1,5 +1,9 @@
-body {
-  color: var(--site-textColor);
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
 }
 
 menu {

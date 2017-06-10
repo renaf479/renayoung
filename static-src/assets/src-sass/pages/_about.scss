@@ -1,3 +1,22 @@
 #about {
+  height: var(--about-height);
+  top: var(--about-top);
+  padding: 64px 32px;
+}
 
+.site-about__title {
+  position: absolute;
+  letter-spacing: -10px;
+  right: 32px;
+  top: 160px;
+  color: var(--white);
+
+  &:before {
+    content: attr(data-content);
+    position:absolute;
+    top:0;
+    left:0;
+    color: var(--black);
+    clip-path: polygon(0 29%, 0% 100%, 60% 100%);
+  }
 }

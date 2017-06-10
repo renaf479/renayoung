@@ -1,34 +1,13 @@
-.navigation {
-  text-transform: uppercase;
-  z-index: 1000;
-  position: relative;
-  right: -20px;
-}
+.site__navigation {
+  position: fixed;
+  top: 25px;
+  left: 50%;
 
-.menu {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  margin: 0;
-  padding: 0;
-}
+  .list__item--nostyle {
+    margin: 8px 0;
+  }
 
-.menu__icon {
-  background-color: currentColor;
-}
-
-.menu__icon__profile {
-  color: var(--icon-color-profile);
-}
-
-.menu__icon__works {
-  color: var(--icon-color-works);
-}
-
-.menu__icon__contact {
-  color: var(--icon-color-contact);
-}
-
-.menu__text {
-  display: none;
+  .svg {
+    width: 50px;
+  }
 }
