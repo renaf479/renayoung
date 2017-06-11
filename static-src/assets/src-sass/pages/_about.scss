@@ -1,22 +1,32 @@
 #about {
+  color: var(--textWhite);
   height: var(--about-height);
   top: var(--about-top);
   padding: 64px 32px;
 }
 
-.site-about__title {
+.site-about__bio {
   position: absolute;
-  letter-spacing: -10px;
-  right: 32px;
+  right: 0;
   top: 160px;
-  color: var(--white);
+  width: 60%;
+}
+
+.about-bio__title {
+  letter-spacing: -10px;
+  color: var(--black);
+  text-align: right;
+  padding-right: 32px;
 
   &:before {
     content: attr(data-content);
     position:absolute;
-    top:0;
-    left:0;
-    color: var(--black);
+    top: 0;
+    color: var(--white);
     clip-path: polygon(0 29%, 0% 100%, 60% 100%);
   }
+}
+
+.about-bio__content {
+
 }
