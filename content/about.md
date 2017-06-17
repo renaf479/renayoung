@@ -2,23 +2,5 @@
 title: About Me
 type: about
 ---
-An h1 header
-============
 
-Paragraphs are separated by a blank line.
-
-2nd paragraph. *Italic*, **bold**, and `monospace`. Itemized lists
-look like:
-
-  * this one
-  * that one
-  * the other one
-
-Note that --- not considering the asterisk --- the actual text
-content starts at 4-columns in.
-
-> Block quotes are
-> written like so.
->
-> They can span multiple paragraphs,
-> if you like.
+I am a frontend developer with 10 years of industry experience. Currently a Software Engineer for IBM Watson Campaign Automation platform. Formerly a Technical Lead at Live Nation's Insomanic Events division (**ADD MORE**) as well as Principle Software Engineer for Evolve Media, LLC (**ADD MORE**)
