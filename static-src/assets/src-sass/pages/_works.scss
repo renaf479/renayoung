@@ -2,5 +2,37 @@
   color: var(--textWhite);
   height: var(--works-height);
   top: var(--works-top);
-  padding: 0 32px;
+}
+
+.works__title {
+  position: relative;
+  text-align: center;
+  color: var(--black);
+
+  &:before {
+    content: attr(data-content);
+    position: absolute;
+    top: 0;
+    color: var(--white);
+    clip-path: polygon(10% 0, 100% 165%, 100% 0);
+  }
+}
+
+.works__content {
+  position: absolute;
+  right: 0;
+  width: 40%;
+  height: 250px;
+  text-align: right;
+}
+
+.works__shape {
+/*    background-color: purple;
+      opacity: .5;
+    clip-path: polygon(0 0, 100% 100%, 0 100%);*/
+  shape-outside: polygon(0 0, 100% 100%, 0 100%);
+  width: 415px;
+  height: inherit;
+  float: left;
+
 }

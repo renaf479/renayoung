@@ -20,11 +20,13 @@ body {
 .site__section {
   position: absolute;
   width: 100%;
+  padding: 0 32px;
 }
 
 .section__title {
-  font-size: 7em;
+  font-size: 6em;
   font-weight: 100;
+  letter-spacing: -5px;
 }
 
 /*

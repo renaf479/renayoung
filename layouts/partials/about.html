@@ -1,35 +1,12 @@
 <section id="about" class="site__about site__section">
     {{range where .Site.Pages "Type" "=" "about"}}
+    <h1 class="section__title about-bio__title" data-content="{{ .Title }}">{{ .Title }}</h1>
     <article class="about-bio__content">
-        <h1 class="section__title about-bio__title" data-content="{{ .Title }}">{{ .Title }}</h1>
         <div class="about-bio__shape"></div>
         {{ .Content }}
     </article>
     {{ end }}
-    <div class="about-bio__picture">
-        <img src="assets/images/profile-pic.jpg"/>
-        <div class="folding-hex">
-            <div class="rotator">
-                <div class="triangle"></div>
-            </div>
-            <div class="rotator">
-                <div class="triangle"></div>
-            </div>
-            <div class="rotator">
-                <div class="triangle"></div>
-            </div>
-            <div class="rotator">
-                <div class="triangle"></div>
-            </div>
-            <div class="rotator">
-                <div class="triangle"></div>
-            </div>
-            <div class="rotator">
-                <div class="triangle"></div>
-            </div>
-        </div>
-    </div>
-    <article class="site-about__cloud">
+    <article class="about__cloud">
         {{range where .Site.Pages "Type" "=" "cloud"}}
         {{ .Content }}
         {{ end }}
