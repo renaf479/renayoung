@@ -4,10 +4,17 @@
   top: var(--about-top);
 }
 
-.about-bio__content {
-  font-size: 1em;
+.about-bio__wrapper {
+  position: absolute;
+  right: 0;
+  top: 75px;
+  text-align: right;
   width: 50%;
+}
 
+.about-bio__content {
+  font-size: 1.2em;
+  line-height: 1.6em;
   p {
     margin: 0;
   }
@@ -22,35 +29,54 @@
     position: absolute;
     top: 0;
     color: var(--white);
-    clip-path: polygon(0 14%, 0 100%, 48% 100%);
+    clip-path: polygon(100% -58%, 13% 100%, 100% 100%);
   }
 }
 
 .about-bio__shape {
-/*  background-color: purple;
+  background-color: purple;
   opacity: .5;
-  clip-path: polygon(0 0, 100% 100%, 100% 0);*/
-  shape-outside: polygon(0 0, 100% 100%, 100% 0);
-  width: 300px;
-  height: 185px;
-  float: right;
+  clip-path: polygon(0 0, 0% 100%, 100% 0);
+  shape-outside: polygon(0 0, 0% 100%, 100% 0);
+  width: 270px;
+  height: 190px;
+  float: left;
+}
+
+.about__resume {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  .svg__profile {
+    width: 100px;
+  }
 }
 
 .about__cloud {
   position: absolute;
-  right: 0;
-  top: 150px;
-  transform: rotate(-31deg);
+  top: 170px;
+  left: 65px;
+  width: 300px;
+  transform: rotate(-58deg);
   transform-origin: 50% 50%;
-  font-size: 1.3em;
+}
 
-  ul {
-    column-count: 3;
+.svg__skillCloud {
+  width: inherit;
+
+  .title {
+    fill: var(--offWhite);
   }
 
-  li {
-    list-style: none;
-    background-color: red;
-    margin: 8px 0;
+  .pillar {
+    fill: #9E9E9E;
+    font-weight: 500;
+  }
+
+  .sub {
+    fill: #424242;
+    font-weight: 500;
   }
 }

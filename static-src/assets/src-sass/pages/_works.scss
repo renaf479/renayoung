@@ -19,11 +19,25 @@
 }
 
 .works__content {
-  position: absolute;
+  position: relative;
+  text-align: center;
+  color: var(--black);
+/*  position: absolute;
   right: 0;
   width: 40%;
   height: 250px;
-  text-align: right;
+  text-align: right;*/
+
+  &:before {
+    content: attr(data-content);
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    text-align: center;
+    color: var(--white);
+    clip-path: polygon(81% 0, 100% 0%, 100% 100%, 93% 100%);
+  }
 }
 
 .works__shape {

@@ -1,8 +1,8 @@
 <section id="works" class="site__works site__section">
     {{range where .Site.Pages "Type" "=" "works"}}
     <h1 class="section__title works__title" data-content="{{ .Title }}">{{ .Title }}</h1>
-    <article class="works__content">
-        <div class="works__shape"></div>
+    <article class="works__content" data-content="{{ .Content }}">
+        <!--<div class="works__shape"></div>-->
         {{ .Content }}
     </article>
     {{ end }}

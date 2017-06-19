@@ -3,4 +3,4 @@ title: About Me
 type: about
 ---
 
-I am a frontend developer with 10 years of industry experience. Currently a Software Engineer for IBM Watson Campaign Automation platform. Formerly a Technical Lead at Live Nation's Insomanic Events division (**ADD MORE**) as well as Principle Software Engineer for Evolve Media, LLC (**ADD MORE**)
+Hi, I'm **Serena Young**. I'm a frontend developer going on 10 years in the industry. Currently a *Software Engineer* for **IBM Watson Campaign Automation** (**ADD MORE**). Previously I've worked as a *Technical Lead* at *Live Nation* where I oversaw a team of developers for their EDM marketing division. I also pioneered the development of an inhouse ad creation platform at *Evolve Media, LLC*.

@@ -1,39 +1,21 @@
 #landing {
-  height: var(--landing-height);
+  color: var(--textWhite);
+  height: calc(var(--landing-height) - 200px);
   top: var(--landing-top);
 }
 
-.site__landing {
-/*  --svgWidth: 175px;
+.landing__wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+}
 
-  .list__navigation {
-    width: 405px;
-    height: 500px;
-    position: absolute;
-    top: 5%;
-    left: 50%;
-    transform: translate(-50%, 0);
-  }
+.landing__avatar {
+  width: 250px;
+}
 
-  .svg {
-    left: 50%;
-    top: 50%;
-    position: absolute;
-    width: var(--svgWidth);
-  }
-
-  .svg__profile {
-    transform: translate(-50%, calc(-50% - 100px));
-    animation: profile 1.4s ease-out forwards;
-  }
-
-  .svg__works {
-    transform: translate(calc(-50% - 100px), calc(-50% + 75px));
-    animation: works 1.4s ease-out forwards;
-  }
-
-  .svg__contact {
-    transform: translate(calc(-50% + 100px), calc(-50% + 75px));
-    animation: contact 1.4s ease-out forwards;
-  }*/
+.landingAvatar__image {
+  width: 100%;
 }
