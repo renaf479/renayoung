@@ -15,7 +15,7 @@
 }
 
 .contact__title {
-  font-size: 5em;
+  font-size: 2em;
 
 /*  position: relative;
   letter-spacing: -10px;
@@ -57,5 +57,17 @@
   .svg__linkedin {
     right: 0;
     bottom: 0;
+  }
+}
+
+@media (min-width: $breakpoint-medium) {
+  .contact__title {
+    font-size: 4em;
+  }
+}
+
+@media (min-width: $breakpoint-large) {
+  .contact__title {
+    font-size: 5em;
   }
 }

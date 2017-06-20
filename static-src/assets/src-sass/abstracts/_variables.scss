@@ -33,14 +33,15 @@
   --icon-color-profile: #c58b8e;
   --icon-color-works: #e57b5e;
   --icon-color-contact: #4bb865;
+
+  --breakpoint-large: 1100px;
+  --breakpoint-medium: 800px;
+  --breakpoint-small: 500px;
 }
+
+$breakpoint-large: 1000px;
+$breakpoint-medium: 800px;
+$breakpoint-small: 500px;
 
 $white: #f0f0f0;
 $black: #000000;
-
-$xs: ( max:  767px );
-$sm: ( min:  768px );
-$md: ( min:  992px );
-$lg: ( min: 1200px );
-$sm-only: ( min: map-get($sm, min), max: map-get($md, min) - 1 );
-$md-only: ( min: map-get($md, min), max: map-get($lg, min) - 1 );

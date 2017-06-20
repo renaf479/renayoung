@@ -61,6 +61,7 @@
   width: 300px;
   transform: rotate(-58deg);
   transform-origin: 50% 50%;
+  display: none;
 }
 
 .svg__skillCloud {
@@ -78,5 +79,15 @@
   .sub {
     fill: #424242;
     font-weight: 500;
+  }
+}
+
+@media (min-width: $breakpoint-medium) {
+
+}
+
+@media (min-width: $breakpoint-large) {
+  .about__cloud {
+    display: block;
   }
 }

@@ -29,8 +29,8 @@
 
 .bgLayer__triangle--bottom {
   @extend %bgLayer__triangle;
-  border-width: 400px calc(var(--site-width)/2) 0 calc(var(--site-width)/2);
   border-color: currentColor transparent transparent transparent;
+  border-width: 400px calc(var(--site-width)/2) 0 calc(var(--site-width)/2);
 }
 
 .bgLayer__slant--se {
@@ -107,4 +107,11 @@
     top: 0;
     color: var(--offWhite);
   }
+}
+
+@media (min-width: $breakpoint-medium) {
+
+}
+
+@media (min-width: $breakpoint-large) {
 }
