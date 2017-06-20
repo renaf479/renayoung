@@ -45,3 +45,9 @@ $breakpoint-small: 500px;
 
 $white: #f0f0f0;
 $black: #000000;
+
+$breakpoints:(
+  'mobile': 768px,
+  'laptop': 1025px,
+  'desktop': 1300px
+);

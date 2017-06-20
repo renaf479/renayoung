@@ -1,5 +1,5 @@
 baseURL = "http://www.renayoung.com/"
-title = "Rena Young"
+title = "---"
 languageCode = "en-us"
 ignoreFiles = ["\\static-src$"]
 

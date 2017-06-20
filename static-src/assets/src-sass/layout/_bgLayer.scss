@@ -1,117 +1,184 @@
-%bgLayer__section {
-  position: absolute;
-  left: 0;
-  width: 100%;
-}
-
-%bgLayer__slant {
-  width: 100%;
-  height: 400px;
-  background-color: var(--bgLayer-slant);
-  //box-shadow: 0px 0px 8px 2px rgba(0,0,0,0.5);
-  transform-origin: 0% 100%;
-  z-index: 100;
-}
-
-%bgLayer__triangle {
-  position: absolute;
-  width: 0;
-  height: 0;
-  border-style: solid;
-}
-
-.bgLayer__triangle--right {
-  @extend %bgLayer__triangle;
-  right: 0;
-  border-width: 300px calc(var(--site-width)/2) 300px 0;
-  border-color: transparent var(--bgLayer-slant) transparent transparent;
-}
-
-.bgLayer__triangle--bottom {
-  @extend %bgLayer__triangle;
-  border-color: currentColor transparent transparent transparent;
-  border-width: 400px calc(var(--site-width)/2) 0 calc(var(--site-width)/2);
-}
-
-.bgLayer__slant--se {
-  @extend %bgLayer__slant;
-  transform: skewY(30.9deg);
-  transform-origin: 0% 100%;
-}
-
-.bgLayer__slant--sw {
-  @extend %bgLayer__slant;
-  transform: skewY(-40deg);
-  transform-origin: 100% 0;
-}
-
 .bgLayer {
-  position: absolute;
-  left: 50%;
-  width: var(--site-width);
-  height: var(--site-height);
-  transform: translate(-50%, 0);
-  background-color: var(--bgLayer);
-  overflow: hidden;
-  z-index: 0;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 300px 25px 300px 300px 50px auto;
+  position: relative;
+
+  & > div {
+
+/*    outline: 1px solid green;*/
+  }
 }
 
 .bgLayer__landing {
-  @extend %bgLayer__section;
-  top: var(--landing-top);
-  height: var(--landing-height);
+  grid-column: span 2;
+  grid-row: span 2;
+  background: white;
   background: var(--bgLayer-landing);
   background: linear-gradient(to top, var(--bgLayer-landing), var(--bgLayer-landing-secondary));
-  z-index: 10;
+  transition: clip-path .5s ease, height .5s ease;
+}
+
+.bgLayer__landing__clip {
+  position: absolute;
+  grid-column: span 2;
+  grid-row: 2/3;
+  background: black;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  clip-path: polygon(0 0, 100% 100%, 100% 100%, 100% 100%, 0 100%);
+/*  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row: 2/3;
+  background: green;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 100% 100%, 0 70%);*/
 }
 
 .bgLayer__about {
-  @extend %bgLayer__section;
-  top: var(--about-top);
-  height: var(--about-height);
-  z-index: 100;
-
-  .bgLayer__triangle--right {
-    position: absolute;
-    right: 0;
-  }
+  height: 300px;
 }
 
 .bgLayer__works {
-  @extend %bgLayer__section;
-  top: var(--works-top);
-  height: var(--works-height);
-  z-index: 100;
+
 }
 
-.bgLayer__contact {
-  @extend %bgLayer__section;
-  top: var(--contact-top);
-  height: var(--contact-height);
-  background: linear-gradient(to top, var(--bgLayer-contact), var(--bgLayer-contact-secondary));
-  z-index: 10;
-
-  &:before {
-    content: '';
-    position: absolute;
-    background: #d9d9d9;
-    background: linear-gradient(to right, var(--offWhite) 0%, #d9d9d9 25%, #d9d9d9 75%, var(--offWhite) 100%);
-    height: 2px;
-    width: 95%;
-    left: 50%;
-    transform: translate(-50%, 0);
-    z-index: 15;
+@include media(">=mobile", "<=laptop") {
+  .bgLayer {
+    height: 600px;
   }
 
-  .bgLayer__triangle--bottom {
-    top: 0;
-    color: var(--offWhite);
+  .bgLayer__landing {
+  }
+
+}
+
+@include media(">laptop") {
+  .bgLayer {
+  }
+
+  .bgLayer__landing {
+  }
+
+  .bgLayer__landing__clip {
+    clip-path: polygon(0 0, 47% 100%, 100% 0, 100% 100%, 0 100%);
+  }
+
+  .bgLayer__about {
+
   }
 }
 
-@media (min-width: $breakpoint-medium) {
 
-}
-
-@media (min-width: $breakpoint-large) {
-}
+// %bgLayer__section {
+//   position: absolute;
+//   left: 0;
+//   width: 100%;
+// }
+//
+// %bgLayer__slant {
+//   width: 100%;
+//   height: 400px;
+//   background-color: var(--bgLayer-slant);
+//   //box-shadow: 0px 0px 8px 2px rgba(0,0,0,0.5);
+//   transform-origin: 0% 100%;
+//   z-index: 100;
+// }
+//
+// %bgLayer__triangle {
+//   position: absolute;
+//   width: 0;
+//   height: 0;
+//   border-style: solid;
+// }
+//
+// .bgLayer__triangle--right {
+//   @extend %bgLayer__triangle;
+//   right: 0;
+//   border-width: 300px calc(var(--site-width)/2) 300px 0;
+//   border-color: transparent var(--bgLayer-slant) transparent transparent;
+// }
+//
+// .bgLayer__triangle--bottom {
+//   @extend %bgLayer__triangle;
+//   border-color: currentColor transparent transparent transparent;
+//   border-width: 400px calc(var(--site-width)/2) 0 calc(var(--site-width)/2);
+// }
+//
+// .bgLayer__slant--se {
+//   @extend %bgLayer__slant;
+//   transform: skewY(30.9deg);
+//   transform-origin: 0% 100%;
+// }
+//
+// .bgLayer__slant--sw {
+//   @extend %bgLayer__slant;
+//   transform: skewY(-40deg);
+//   transform-origin: 100% 0;
+// }
+//
+// .bgLayer {
+//   position: absolute;
+//   left: 50%;
+//   width: var(--site-width);
+//   height: var(--site-height);
+//   transform: translate(-50%, 0);
+//   background-color: var(--bgLayer);
+//   overflow: hidden;
+//   z-index: 0;
+// }
+//
+// .bgLayer__landing {
+//   @extend %bgLayer__section;
+//   top: var(--landing-top);
+//   height: var(--landing-height);
+//   background: var(--bgLayer-landing);
+//   background: linear-gradient(to top, var(--bgLayer-landing), var(--bgLayer-landing-secondary));
+//   z-index: 10;
+// }
+//
+// .bgLayer__about {
+//   @extend %bgLayer__section;
+//   top: var(--about-top);
+//   height: var(--about-height);
+//   z-index: 100;
+//
+//   .bgLayer__triangle--right {
+//     position: absolute;
+//     right: 0;
+//   }
+// }
+//
+// .bgLayer__works {
+//   @extend %bgLayer__section;
+//   top: var(--works-top);
+//   height: var(--works-height);
+//   z-index: 100;
+// }
+//
+// .bgLayer__contact {
+//   @extend %bgLayer__section;
+//   top: var(--contact-top);
+//   height: var(--contact-height);
+//   background: linear-gradient(to top, var(--bgLayer-contact), var(--bgLayer-contact-secondary));
+//   z-index: 10;
+//
+//   &:before {
+//     content: '';
+//     position: absolute;
+//     background: #d9d9d9;
+//     background: linear-gradient(to right, var(--offWhite) 0%, #d9d9d9 25%, #d9d9d9 75%, var(--offWhite) 100%);
+//     height: 2px;
+//     width: 95%;
+//     left: 50%;
+//     transform: translate(-50%, 0);
+//     z-index: 15;
+//   }
+//
+//   .bgLayer__triangle--bottom {
+//     top: 0;
+//     color: var(--offWhite);
+//   }
+// }
+//
