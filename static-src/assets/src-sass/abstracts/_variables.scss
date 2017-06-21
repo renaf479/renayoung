@@ -3,31 +3,29 @@
   --white: #ffffff;
   --offWhite: #f0f0f0;
   --textWhite: #f0f0f0;
-  --bgColor: #000000;
-  //--bgLayer-slant: #3c3d42;
-  --bgLayer: #ffffff;
-  --bgLayer-slant: #000000;
-  --bgLayer-landing: #c04848;
-  --bgLayer-landing-secondary: #480048;
+
+  --site-bgColor: #000000;
+  --bgColor: #ffffff;
+  --landing-bgColor: #c04848;
+  --landing-bgColor-secondary: #480048;
+  --about-bgColor: #000000;
+  --works-bgColor: #ffffff;
+  --contact-bgColor: #642b73;
+  --contact-bgColor-secondary: #c6426e;
+
+  --bgLayer-works: #ffffff;
   --bgLayer-contact: #642b73;
   --bgLayer-contact-secondary: #c6426e;
 
-  --navigation-color: #dedede;
-
   --landing-height: 800px;
-  --landing-top: 0;
-  --about-height: 600px;
-  --about-top: 500px;
-  --works-height: 800px;
-  --works-top: 1100px;
-  --contact-height: 728px;
-  --contact-top: 1800px;
+  --about-height: 700px;
+  --works-height: 1300px;
+  --contact-height: 500px;
 
 
 
   --site-width: 1000px;
   --site-height: 2570px;
-  --site-bgColor: #1E2338;
   --site-textColor: #E6ECF3;
   --icon-size: 32px;
   --icon-color-profile: #c58b8e;
@@ -49,5 +47,5 @@ $black: #000000;
 $breakpoints:(
   'mobile': 768px,
   'laptop': 1025px,
-  'desktop': 1300px
+  'desktop': 1200px
 );

@@ -1,3 +1,23 @@
+.landing {
+  height: 90vh;
+  background: var(--landing-bgColor);
+  background: linear-gradient(to top, var(--landing-bgColor), var(--landing-bgColor-secondary));
+  transition: height .5s ease;
+  z-index: 90;
+}
+
+@include media(">laptop") {
+  .landing {
+    height: var(--landing-height);
+  }
+}
+
+@include media(">desktop") {
+}
+
+
+
+/*
 #landing {
   color: var(--textWhite);
   height: calc(var(--landing-height) - 200px);
@@ -18,4 +38,4 @@
 
 .landingAvatar__image {
   width: 100%;
-}
+}*/

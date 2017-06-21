@@ -4,15 +4,20 @@
         {{ partial "head.html" . }}
     </head>
     <body class="body">
-        <div class="site__wrapper">
-            {{ partial "bgLayer.html" }}
-            <!-- <section class="site__content">
+        <div class="site__content">
+            <section class="landing section__content">
                 {{ partial "landing.html" }}
+            </section>
+            <section class="about section__content">
                 {{ partial "about.html" . }}
+            </section>
+            <section class="works section__content">
                 {{ partial "works.html" . }}
+            </section>
+            <section class="contact section__content">
                 {{ partial "contact.html" . }}
-                {{ partial "footer.html" }}
-            </section> -->
+            </section>
         </div>
+        {{ partial "footer.html" }}
     </body>
 </html>

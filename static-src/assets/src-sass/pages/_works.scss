@@ -1,3 +1,22 @@
+.works {
+  height: 90vh;
+  background: var(--works-bgColor);
+  transition: height .5s ease;
+  z-index: 80;
+}
+
+@include media(">laptop") {
+  .works {
+    margin-top: calc(var(--about-height) * .6 * -1);
+    height: var(--works-height);
+  }
+}
+
+@include media(">desktop") {
+}
+
+
+/*
 #works {
   color: var(--textWhite);
   height: var(--works-height);
@@ -22,12 +41,6 @@
   position: relative;
   text-align: center;
   color: var(--black);
-/*  position: absolute;
-  right: 0;
-  width: 40%;
-  height: 250px;
-  text-align: right;*/
-
   &:before {
     content: attr(data-content);
     position: absolute;
@@ -41,12 +54,10 @@
 }
 
 .works__shape {
-/*    background-color: purple;
-      opacity: .5;
-    clip-path: polygon(0 0, 100% 100%, 0 100%);*/
+
   shape-outside: polygon(0 0, 100% 100%, 0 100%);
   width: 415px;
   height: inherit;
   float: left;
 
-}
+}*/

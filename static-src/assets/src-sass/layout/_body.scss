@@ -1,43 +1,36 @@
 body {
-  background: var(--bgColor);
-}
-
-// .site__wrapper {
-//   max-width: var(--site-width);
-//   width: 100%;
-//   height: var(--site-height);
-//   margin: 0 auto;
-//   position: relative;
-// }
-
-.site__content {
-  position: relative;
-  height: inherit;
-  width: inherit;
-  z-index: 100;
-}
-
-.site__section {
-  position: absolute;
-  width: 100%;
-  padding: 0 32px;
+  background-color: var(--site-bgColor);
 }
 
 .section__title {
   font-size: 3em;
   font-weight: 100;
+}
+
+.site__content {
+  position: relative;
+  background-color: var(--bgColor);
+  width: 100vw;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.section__content {
+  position: relative;
+}
+
+@include media(">laptop") {
 
 }
 
-@media (min-width: $breakpoint-medium) {
-  .section__title {
-    font-size: 5em;
-    letter-spacing: -5px;
+@include media(">desktop") {
+
+  .site__content {
+    width: 1201px;
   }
-}
 
-@media (min-width: $breakpoint-large) {
   .section__title {
     font-size: 6em;
+    height: 100px;
   }
 }
