@@ -1,13 +1,19 @@
 baseURL = "http://www.renayoung.com/"
-title = "Serena Young"
+title = "Site"
 languageCode = "en-us"
 ignoreFiles = ["\\static-src$"]
 
 [params]
 
-    [params.social]
-        linkedin = "https://www.linkedin.com/in/renaf/"
-        github = "https://github.com/renaf479"
+    [params.social.linkedin]
+        title = "Linkedin"
+        url = "https://www.linkedin.com/in/renaf/"
+        slug = "linkedin"
+
+    [params.social.github]
+        title = "Github"
+        url = "https://github.com/renaf479"
+        slug = "github"
 
 [taxonomies]
 range = "range"

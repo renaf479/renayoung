@@ -1,5 +1,5 @@
 .about {
-  height: 90vh;
+  margin-top: -10%;
   transition: clip-path .5s ease, height .5s ease;
   z-index: 100;
   color: var(--textWhite);
@@ -10,6 +10,14 @@
   width: 100%;
   height: 100%;
   background: var(--about-bgColor);
+  clip-path: polygon(0 0, 100% 5%, 100% 100%, 0% 90%);
+  transition: clip-path .5s ease, height .5s ease;
+  z-index: 0;
+}
+
+.about__wrapper {
+  position: relative;
+  padding: 0 8px;
 }
 
 .about__title {
@@ -19,13 +27,40 @@
   padding: 0 8px;
 }
 
+.about__connect {
+  display: flex;
+  flex-direction: row;
+
+  .icon__svg {
+    width: 56px;
+  }
+}
+
+.about__connect__item {
+  margin: 0 8px;
+}
+
 .about__skills {
   display: none;
 }
 
-@include media(">laptop") {
+@include media(">mobile") {
   .about {
     margin-top: calc(var(--about-height) * .35 * -1);
+    height: 90vh;
+  }
+
+  .about__bg {
+    clip-path: polygon(0 0, 50% 10%, 100% 0, 100% 100%, 0 60%);
+  }
+
+  .about__wrapper {
+    padding: 0 16px;
+  }
+}
+
+@include media(">laptop") {
+  .about {
     height: var(--about-height);
   }
 
@@ -38,6 +73,7 @@
     z-index: 10;
     display: flex;
     flex-direction: row;
+    padding: 0;
   }
 
   .about__content {
