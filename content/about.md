@@ -3,4 +3,4 @@ title: About Me
 type: about
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ac turpis congue, auctor odio sed, dignissim orci. Maecenas nec porta purus, at pretium elit. Ut convallis fringilla odio nec interdum. In ultricies libero et libero rutrum, eget iaculis dui hendrerit. Curabitur feugiat vitae ante ac volutpat. Fusce nisi ipsum, ullamcorper et tincidunt eget, imperdiet a turpis. Ut ac nulla at metus interdum vehicula ut quis ipsum. Suspendisse aliquet congue leo, eu tempor magna vestibulum eu. Ut sed arcu eros.
+Hi, I'm **Serena Young**. I'm a frontend developer going on 10 years in the industry. Currently a *Software Engineer* for **IBM Watson Campaign Automation** (**ADD MORE**). Previously I've worked as a *Technical Lead* at *Live Nation* where I oversaw a team of developers for their EDM marketing division. I also pioneered the development of an inhouse ad creation platform at *Evolve Media, LLC*.

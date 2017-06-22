@@ -1,141 +1,102 @@
 .about {
-  margin-top: -10%;
-  transition: clip-path .5s ease, height .5s ease;
+  color: var(--white);
+  margin-top: calc(70vh * var(--about-slant-mobile) * -1);
   z-index: 100;
-  color: var(--textWhite);
+  height: 70vh;
 }
-
-.about__bg {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: var(--about-bgColor);
-  clip-path: polygon(0 0, 100% 5%, 100% 100%, 0% 90%);
-  transition: clip-path .5s ease, height .5s ease;
-  z-index: 0;
-}
-
-.about__wrapper {
-  position: relative;
-  padding: 0 8px;
-}
-
-.about__title {
-}
-
-.about__bio {
-  padding: 0 8px;
-}
-
-.about__connect {
-  display: flex;
-  flex-direction: row;
-
-  .icon__svg {
-    width: 56px;
-  }
-}
-
-.about__connect__item {
-  margin: 0 8px;
-}
-
-.about__skills {
-  display: none;
-}
-
-@include media(">mobile") {
-  .about {
-    margin-top: calc(var(--about-height) * .35 * -1);
-    height: 90vh;
-  }
 
   .about__bg {
-    clip-path: polygon(0 0, 50% 10%, 100% 0, 100% 100%, 0 60%);
-  }
-
-  .about__wrapper {
-    padding: 0 16px;
-  }
-}
-
-@include media(">laptop") {
-  .about {
-    height: var(--about-height);
-  }
-
-  .about__bg {
-    clip-path: polygon(0 0, 50% 35%, 100% 0, 100% 100%, 0 40%);
+    --aboutTR: calc(100% * var(--about-slant-mobile));
+    --aboutBR: calc(100% * (1 - var(--about-slant-mobile)));
+    position: absolute;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--about-bgColor);
+    clip-path: polygon(0 0, 100% var(--aboutTR), 100% 100%, 0 var(--aboutBR));
   }
 
   .about__wrapper {
     position: relative;
-    z-index: 10;
-    display: flex;
-    flex-direction: row;
-    padding: 0;
+    padding: 0 16px;
   }
-
-  .about__content {
-    flex-basis: 100%;
-  }
-
-  .about__bio {
-    padding: 0 32px;
-  }
-
-  .bio__shape--top,
-  .bio__shape--bottom {
-    background-color: purple;
-    opacity: .5;
-
-  }
-
-  .bio__shape--top {
-    clip-path: polygon(0 0, 100% 0%, 100% 100%);
-    shape-outside: polygon(0 0, 100% 0%, 100% 100%);
-    width: 300px;
-    height: 130px;
-    float: right;
-  }
-
-  .bio__shape--bottom {
-    background-color: purple;
-    opacity: .5;
-    clip-path: polygon(0 0, 100% 100%, 0% 100%);
-    shape-outside: polygon(0 0, 100% 100%, 0% 100%);
-    width: 270px;
-    height: 135px;
-    float: left;
-  }
-
-  .about__skills {
-    display: block;
-    flex-basis: 100%;
-
-    .svg__skillCloud {
-      display: block;
-      width: 80%;
-      margin: 50px auto 0;
-
-      .title {
-        fill: var(--offWhite);
-      }
-
-      .pillar {
-        fill: #9E9E9E;
-        font-weight: 500;
-      }
-
-      .sub {
-        fill: #424242;
-        font-weight: 500;
-      }
+    .about__title {
+      background: transparent;
+      color: var(--white);
     }
+
+    .about__content {
+      display: grid;
+      height: 340px;
+      grid-template-columns: 275px 1fr;
+      grid-template-rows: 1fr 1fr;
+      grid-template-areas:
+        "profile bio"
+        ". connect";
+    }
+
+      .about__profile {
+        grid-area: profile;
+        width: 100%;
+        padding: 16px;
+      }
+
+      .about__bio {
+        grid-area: bio;
+      }
+
+      .about__connect {
+        grid-area: connect;
+        display: flex;
+      }
+
+        .about__connect__item {
+          margin: 8px;
+
+          .icon__svg {
+            width: 48px;
+          }
+        }
+
+@include media(">mobile") {
+  .about {
+    margin-top: calc(var(--about-height) * var(--about-slant) * -1);
+    height: var(--about-height);
   }
+
+    .about__bg {
+      --aboutTR: calc(100% * var(--about-slant));
+      --aboutBR: calc(100% * (1 - var(--about-slant)));
+    }
+
+    .about__title {
+      background-image: linear-gradient(7deg, #ffffff 0%,#ffffff 50%, #000000 50%,#000000 100%);
+      color: transparent;
+      -webkit-background-clip: text;
+      background-clip: text;
+      text-align: center;
+    }
+
+    .about__content {
+      flex-direction: row;
+    }
+
+      .about__connect {
+        flex-direction: row;
+      }
+}
+
+@include media(">laptop") {
+  .about {
+  }
+
+    .about__title {
+      background-image: linear-gradient(5deg, #ffffff 0%,#ffffff 50%, #000000 50%,#000000 100%);
+    }
 }
 
 @include media(">desktop") {
+
 }
 
 

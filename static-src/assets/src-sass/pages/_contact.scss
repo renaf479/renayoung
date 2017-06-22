@@ -1,15 +1,41 @@
 .contact {
   height: 90vh;
-  background: var(--contact-bgColor);
-  background: linear-gradient(to top, var(--contact-bgColor), var(--contact-bgColor-secondary));
   transition: height .5s ease;
-  z-index: 70;
 }
+
+  .contact__bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: var(--contact-bgColor);
+    background: linear-gradient(to top, var(--contact-bgColor), var(--contact-bgColor-secondary));
+    clip-path: polygon(0 0, 50% 50%, 100% 0, 100% 100%, 0% 100%);
+  }
+
+  .connect__wrapper {
+    position: relative;
+    height: 100%;
+  }
+
+    .contact__cta {
+      width: 52px;
+    }
+
+
+@include media(">mobile") {
+    .contact__cta {
+      width: 150px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+}
+
 
 @include media(">laptop") {
   .contact {
     height: var(--contact-height);
-    clip-path: polygon(0 0, 50% 50%, 100% 0, 100% 100%, 0% 100%);
   }
 }
 

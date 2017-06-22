@@ -1,5 +1,5 @@
 .works {
-  height: 90vh;
+  height: var(--works-height);
   background: var(--works-bgColor);
   transition: height .5s ease;
   z-index: 80;
@@ -8,7 +8,7 @@
 @include media(">laptop") {
   .works {
     margin-top: calc(var(--about-height) * .6 * -1);
-    height: var(--works-height);
+
   }
 }
 
