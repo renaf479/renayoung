@@ -16,47 +16,47 @@
     clip-path: polygon(0 0, 100% var(--aboutTR), 100% 100%, 0 var(--aboutBR));
   }
 
-  .about__wrapper {
-    position: relative;
-    padding: 0 16px;
+  .about__content {
+    display: block;
+/*    display: grid;
+    grid-template-columns: 100px 1fr;
+    grid-template-rows: 50px 1fr 1fr;
+    grid-gap: 8px;
+    grid-template-areas:
+            "header header"
+            "profile bio"
+            "connect .";*/
   }
+
     .about__title {
       background: transparent;
       color: var(--white);
     }
 
-    .about__content {
-      display: grid;
-      height: 340px;
-      grid-template-columns: 275px 1fr;
-      grid-template-rows: 1fr 1fr;
-      grid-template-areas:
-        "profile bio"
-        ". connect";
+    .about__profile {
+      background-color: purple;
+      opacity: .5;
+      clip-path: polygon(0 0, 0% 100%, 100% 0);
+      shape-outside: polygon(0 0, 0% 100%, 100% 0);
+      width: 270px;
+      height: 190px;
+      float: left;
     }
 
-      .about__profile {
-        grid-area: profile;
-        width: 100%;
-        padding: 16px;
-      }
+    .about__bio {
+    }
 
-      .about__bio {
-        grid-area: bio;
-      }
+    .about__connect {
+      display: flex;
+    }
 
-      .about__connect {
-        grid-area: connect;
-        display: flex;
-      }
+      .about__connect__item {
+        margin: 8px;
 
-        .about__connect__item {
-          margin: 8px;
-
-          .icon__svg {
-            width: 48px;
-          }
+        .icon__svg {
+          width: 48px;
         }
+      }
 
 @include media(">mobile") {
   .about {
@@ -69,21 +69,42 @@
       --aboutBR: calc(100% * (1 - var(--about-slant)));
     }
 
+    .about__content {
+      height: 340px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: 100px 1fr 1fr;
+      grid-gap: 16px;
+      grid-template-areas:
+              "header header header"
+              "profile bio bio"
+              "profile connect connect";
+    }
+
     .about__title {
-      background-image: linear-gradient(7deg, #ffffff 0%,#ffffff 50%, #000000 50%,#000000 100%);
+      grid-area: header;
+      background-image: linear-gradient(5.5deg, #ffffff 0%,#ffffff 50%, #000000 50%,#000000 100%);
       color: transparent;
       -webkit-background-clip: text;
       background-clip: text;
       text-align: center;
     }
 
-    .about__content {
-      flex-direction: row;
+    .about__profile {
+      grid-area: profile;
+      shape-outside: none;
+      width: 100%;
+      height: auto;
+      float: none;
     }
 
-      .about__connect {
-        flex-direction: row;
-      }
+    .about__bio {
+      grid-area: bio;
+    }
+
+    .about__connect {
+      grid-area: connect;
+    }
 }
 
 @include media(">laptop") {
