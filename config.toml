@@ -15,6 +15,11 @@ ignoreFiles = ["\\static-src$"]
         url = "https://github.com/renaf479"
         slug = "github"
 
+    [params.social.resume]
+        title = "Resume"
+        url = "https://github.com/renaf479"
+        slug = "resume"
+
 [taxonomies]
 range = "range"
 slug = "slug"

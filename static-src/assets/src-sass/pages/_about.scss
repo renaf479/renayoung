@@ -1,8 +1,8 @@
 .about {
   color: var(--white);
-  margin-top: calc(70vh * var(--about-slant-mobile) * -1);
+  margin-top: -100px;
   z-index: 100;
-  height: 70vh;
+  transition: clip-path .2s, height .2s;
 }
 
   .about__bg {
@@ -14,18 +14,11 @@
     height: 100%;
     background-color: var(--about-bgColor);
     clip-path: polygon(0 0, 100% var(--aboutTR), 100% 100%, 0 var(--aboutBR));
+    transition: clip-path .2s;
   }
 
   .about__content {
     display: block;
-/*    display: grid;
-    grid-template-columns: 100px 1fr;
-    grid-template-rows: 50px 1fr 1fr;
-    grid-gap: 8px;
-    grid-template-areas:
-            "header header"
-            "profile bio"
-            "connect .";*/
   }
 
     .about__title {
@@ -34,24 +27,32 @@
     }
 
     .about__profile {
-      background-color: purple;
-      opacity: .5;
-      clip-path: polygon(0 0, 0% 100%, 100% 0);
-      shape-outside: polygon(0 0, 0% 100%, 100% 0);
-      width: 270px;
-      height: 190px;
+      shape-outside: circle(50% at 50% 50%);
+      width: 100px;
+      height: 100px;
+      margin: 16px 8px 0 0;
       float: left;
     }
+
+      .profile__image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 100%;
+        border: 4px solid var(--white);
+      }
 
     .about__bio {
     }
 
     .about__connect {
       display: flex;
+      justify-content: center;
+      z-index: 100;
     }
 
       .about__connect__item {
-        margin: 8px;
+        margin: 0 8px;
 
         .icon__svg {
           width: 48px;
@@ -73,17 +74,17 @@
       height: 340px;
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      grid-template-rows: 100px 1fr 1fr;
-      grid-gap: 16px;
+      grid-template-rows: 100px 300px 1fr;
+      grid-gap: 4px 16px;
       grid-template-areas:
               "header header header"
               "profile bio bio"
-              "profile connect connect";
+              "connect bio bio";
     }
 
     .about__title {
       grid-area: header;
-      background-image: linear-gradient(5.5deg, #ffffff 0%,#ffffff 50%, #000000 50%,#000000 100%);
+      background-image: linear-gradient(7deg, #ffffff 0%, #ffffff 47%, #000000 47%, #000000 100%);
       color: transparent;
       -webkit-background-clip: text;
       background-clip: text;
@@ -91,12 +92,38 @@
     }
 
     .about__profile {
+      position: relative;
       grid-area: profile;
       shape-outside: none;
       width: 100%;
       height: auto;
       float: none;
+      margin: 0;
+
     }
+
+      .profile__image {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 10;
+        border-radius: 0;
+        border: none;
+        width: 95%;
+        height: 95%;
+        clip-path: polygon(0 5%, 100% 0, 100% 95%, 0% 100%);
+      }
+
+      .profile__border {
+        position: absolute;
+        top: 0;
+        z-index: 0;
+        background-color: var(--white);
+        width: 100%;
+        height: 100%;
+        clip-path: polygon(3% 10%, 100% 0, 97% 93%, 0% 100%);
+      }
 
     .about__bio {
       grid-area: bio;
@@ -104,7 +131,26 @@
 
     .about__connect {
       grid-area: connect;
+      margin-top: -30px;
+      height: 70px;
+      text-align: center;
     }
+
+      .about__connect__item {
+        flex: 1;
+      }
+
+      .about__connect__item:nth-of-type(1) {
+        align-self: flex-end;
+      }
+
+      .about__connect__item:nth-of-type(2) {
+        align-self: center;
+      }
+
+      .about__connect__item:nth-of-type(3) {
+        align-self: flex-start;
+      }
 }
 
 @include media(">laptop") {
@@ -112,7 +158,7 @@
   }
 
     .about__title {
-      background-image: linear-gradient(5deg, #ffffff 0%,#ffffff 50%, #000000 50%,#000000 100%);
+      background-image: linear-gradient(5deg, #ffffff 0%, #ffffff 47%, #000000 47%, #000000 100%);
     }
 }
 

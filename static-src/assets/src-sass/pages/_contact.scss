@@ -26,6 +26,10 @@
   .contact__bg {
     clip-path: polygon(0 0, 50% 50%, 100% 0, 100% 100%, 0% 100%);
   }
+  
+    .contact__title {
+      text-align: center;
+    }
 
     .contact__cta {
       width: 150px;
@@ -44,78 +48,3 @@
 
 @include media(">desktop") {
 }
-
-/*
-#contact {
-  color: var(--textWhite);
-  height: var(--contact-height);
-  top: var(--contact-top);
-}
-
-.site__contact {
-
-}
-
-.contact__content {
-  color: var(--black);
-  text-align: center;
-
-}
-
-.contact__title {
-  font-size: 2em;
-
-!*  position: relative;
-  letter-spacing: -10px;
-  color: var(--black);
-
-  &:before {
-    content: attr(data-content);
-    position: absolute;
-    top: 0;
-    color: var(--white);
-    clip-path: polygon(100% -33%, 105% 100%, 20% 100%);
-  }*!
-}
-
-
-.contact__links {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 300px;
-  height: 300px;
-
-  .icon__svg {
-    width: 150px;
-    position: absolute;
-  }
-
-  .svg__contact {
-    left: 50%;
-    transform: translate(-50%, 0);
-  }
-
-  .svg__github {
-    left: 0;
-    bottom: 0;
-  }
-
-  .svg__linkedin {
-    right: 0;
-    bottom: 0;
-  }
-}
-
-@media (min-width: $breakpoint-medium) {
-  .contact__title {
-    font-size: 4em;
-  }
-}
-
-@media (min-width: $breakpoint-large) {
-  .contact__title {
-    font-size: 5em;
-  }
-}*/
