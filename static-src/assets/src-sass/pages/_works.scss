@@ -1,13 +1,42 @@
 .works {
   height: var(--works-height);
-  background: var(--works-bgColor);
   transition: height .5s ease;
-  z-index: 80;
+  z-index: 110;
+}
+
+  .works__bg {
+    position: absolute;
+    z-index: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+@include media(">mobile") {
+
+  .works {
+    margin-top: calc(var(--about-height) * var(--about-slant) * -1);
+  }
+
+    .works__bg {
+      background-color: var(--works-bgColor);
+      clip-path: polygon(0 10%, 100% 18.5%, 100% 55%, 0% 75%);
+    }
+
+      .works__title {
+        background-image: linear-gradient(5deg, #000000 0%, #000000 43.5%, #ffffff 43.5%, #ffffff 100%);
+        color: transparent;
+        -webkit-background-clip: text;
+        background-clip: text;
+      }
+
+      .works__description {
+        text-align: center;
+      }
 }
 
 @include media(">laptop") {
   .works {
-    margin-top: calc(var(--about-height) * .6 * -1);
+    //margin-top: calc(var(--about-height) * .6 * -1);
 
   }
 }

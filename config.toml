@@ -5,6 +5,10 @@ ignoreFiles = ["\\static-src$"]
 
 [params]
 
+    [params.landing]
+        name = "Serena Young"
+        title = "Web Developer"
+
     [params.social.linkedin]
         title = "Linkedin"
         url = "https://www.linkedin.com/in/renaf/"
