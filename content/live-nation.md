@@ -3,7 +3,8 @@ title: Live Nation
 slug: live-nation
 type: companies
 weight: 2
-years: 2015 - 2014
+year: Jan.2014 - May.2015
+position: Technical Lead
 ---
 
 Live Nation

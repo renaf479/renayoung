@@ -1,0 +1,17 @@
+<svg class="svg svg__livenation" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 110 110">
+    <title>Live Nation</title>
+    <g class="svg__border">
+        <path d="M100.1,150a50,50,0,1,1,50-50,50,50,0,0,1-50,50" transform="translate(-45.1 -45)" fill="#ffffff"/>
+        <path d="M100.1,55a45,45,0,1,1-45,45,45.1,45.1,0,0,1,45-45m0-5a50,50,0,1,0,50,50,50,50,0,0,0-50-50Z" transform="translate(-45.1 -45)" fill="#e31b25"/>
+    </g>
+    <g class="svg__logo">
+        <path d="M79.1,96.9s1.6,10.4,8.3,10.8c0,0-.2,21.2,10.2,34.3,0,0-11.1-13.8-13.3-28.6A21.2,21.2,0,0,1,79.1,96.9Z" transform="translate(-45.1 -45)" fill="#241e20"/>
+        <path d="M101.4,77.9" transform="translate(-45.1 -45)" fill="#241e20"/>
+        <path d="M101.4,77.9c-11,12.2-15.8,42.3-1.6,63.7C93.3,127.3,89.4,99,115.1,95.5c6.9-4.2,10.7-18.4.3-28C115.5,72.8,112,80.1,101.4,77.9Z" transform="translate(-45.1 -45)" fill="#241e20"/>
+        <circle cx="41.2" cy="54.9" r="2.2" fill="#019ce5"/>
+        <circle cx="41" cy="44.2" r="4.2" fill="#54b84a"/>
+        <circle cx="46.4" cy="32.2" r="5.5" fill="#fedb01"/>
+        <circle cx="59.3" cy="21.7" r="7.4" fill="#e31b25"/>
+    </g>
+    <circle class="svg__hover" cx="54.7" cy="54.7" r="45.7" fill="#e31b25"/>
+</svg>

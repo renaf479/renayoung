@@ -1,4 +1,6 @@
-<div class="about__bg"></div>
+<div class="about__bg">
+    <div class="about__line"></div>
+</div>
 <div class="about__content section__content">
     {{range where .Site.Pages "Type" "=" "about"}}
     <h2 class="section__title about__title">{{ .Title }}</h2>

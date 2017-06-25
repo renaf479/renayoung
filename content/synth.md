@@ -3,7 +3,8 @@ title: Synth Venture
 slug: synth
 type: companies
 weight: 0
-years: Ongoing
+year: Present
+position: Maker, Breaker, and Fixer
 ---
 
 Synth

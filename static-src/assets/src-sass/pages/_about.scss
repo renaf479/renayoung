@@ -69,6 +69,34 @@
     .about__bg {
       --aboutTR: calc(100% * var(--about-slant));
       --aboutBR: calc(100% * (1 - var(--about-slant)));
+
+      .about__line {
+        position: absolute;
+        max-width: 750px;
+        width: 100%;
+        height: 100%;
+        left: 50%;
+        transform: translate(-50%, 0);
+
+        &:before,
+        &:after {
+          content: '';
+          position: absolute;
+          left: 15.3%;
+          background-color: var(--white);
+          width: 18px;
+          height: inherit;
+        }
+
+        &:after {
+          bottom: 0;
+          height: 50%;
+          left: 15%;
+          width: 26px;
+        }
+
+
+      }
     }
 
     .about__content {

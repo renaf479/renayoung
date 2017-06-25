@@ -25,5 +25,6 @@ ignoreFiles = ["\\static-src$"]
         slug = "resume"
 
 [taxonomies]
-range = "range"
-slug = "slug"
+year = "years"
+slug = "slugs"
+position = "positions"

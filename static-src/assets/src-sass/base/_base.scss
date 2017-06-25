@@ -16,6 +16,10 @@ menu {
 .list--nostyle {
   margin: 0;
   padding: 0;
+
+  li {
+    list-style: none;
+  }
 }
 
 .list__item--nostyle {
