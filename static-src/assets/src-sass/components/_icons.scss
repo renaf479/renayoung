@@ -1,82 +1,49 @@
-@keyframes rotate {
-  from{
-    transform: rotate(0deg);
-  }
-  to{
-    transform: rotate(180deg);
+.icon__svg {
+  --transition-time: .35s;
+  &:hover {
+    .icon__border {
+      transform: rotate(180deg);
+      opacity: 0;
+    }
+
+    .icon__border--secondary {
+      transform: rotate(-180deg);
+    }
   }
 }
 
-.icon {
-  margin: 8px;
-  padding: 6px;
-  width: var(--icon-size);
-  height: var(--icon-size);
-  display: block;
-  position: relative;
-  border-radius: 100%;
-  border: 2px solid var(--color-white);
-  background-color: var(--color-black);
-  opacity: .86;
-  transition: opacity .35s;
+.icon__border,
+.icon__border--secondary {
+  transition: transform var(--transition-time) linear, opacity var(--transition-time) linear;
+  transform-origin: 50% 50%;
+}
 
-  &:before,
-  &:after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    border-radius: 100%;
-    padding: 5px;
-    top: -7px;
-    left: -7px;
-  }
+.icon__border {
+  stroke-width: 10px;
+  stroke-miterlimit: 10;
+}
 
-  &:before {
-    border: 2px solid transparent;
-  }
+.icon__border--secondary {
+  fill: var(--black);
+  stroke: var(--white);
+  stroke-width: 5px;
+}
 
-  &:after {
-    border: 2px solid transparent;
+.svg__linkedin {
+  .linkedin--outer,
+  .linkedin--i,
+  .linkedin--l {
+    transition: fill var(--transition-time) linear;
   }
 
   &:hover {
-    opacity: 1;
-    box-shadow: 0 0 6px 3px rgba($white, .4);
-
-    &:before {
-      border-top-color: currentColor;
-      border-right-color: currentColor;
-      border-bottom-color: currentColor;
-
-      transition:
-        border-top-color .15s linear,
-        border-right-color .15s linear .1s,
-        border-bottom-color .15s linear .2s;
+    .linkedin--outer {
+      fill: var(--white);
     }
 
-    &:after {
-      border-top: 2px solid currentColor;
-      border-left-width: 2px;
-      border-right-width: 2px;
-      transform: rotate(270deg);
-      transition:
-        transform .4s linear 0s,
-        border-left-width 0s linear .35s;
+    .linkedin--i,
+    .linkedin--l {
+      fill: var(--black);
     }
   }
-
-  &:active {
-    &:before {
-    }
-
-    &:after {
-    }
-  }
-}
-
-.icon__svg {
-  position: relative;
-  width: inherit;
-  height: inherit;
 }

@@ -33,25 +33,6 @@
             "live-nation content-live-nation"
             "evolve-media content-evolve-media";
 
-    .svg {
-      width: 75px;
-      cursor: pointer;
-
-      &:hover {
-        .svg__hover {
-          opacity: 1;
-          transform: scale(1, 1);
-        }
-      }
-    }
-
-    .svg__hover {
-      opacity: 0;
-      transform-origin: 50% 50%;
-      transform: scale(0, 0);
-      transition: transform .3s, opacity .5s;
-    }
-
     .svg__synth {
       grid-area: synth;
     }
@@ -85,6 +66,58 @@
       grid-area: content-evolve-media;
     }
   }
+
+    .timeline__item__svg {
+      --transitionTime: .27s;
+      width: 75px;
+      cursor: pointer;
+      clip-path: circle(47% at 50% 50%);
+
+      .svg__logo {
+        transition: fill var(--transitionTime);
+      }
+
+      .svg__hover {
+        transform-origin: 50% 50%;
+        transform: scale(0);
+        transition: transform var(--transitionTime);
+      }
+
+      &:hover {
+        .svg__hover {
+          transform: scale(1.17);
+        }
+      }
+    }
+
+    .svg__synth:hover {
+      .svg__logo {
+        fill: var(--white);
+      }
+    }
+
+    .svg__evolve:hover {
+      .logo__evolve--evolve,
+      .logo__evolve--slash,
+      .logo__evolve--media {
+        fill: var(--white);
+      }
+    }
+
+    .svg__livenation:hover {
+      .svg__logo {
+        & > circle,
+        & > path {
+          fill: var(--white);
+        }
+      }
+    }
+
+    .svg__ibm:hover {
+      .svg__logo {
+        fill: var(--white);
+      }
+    }
 
   .company__content {
     padding: 0 8px;
@@ -147,15 +180,15 @@
   .timeline__content {
     position: absolute;
     top: 410px;
-    left: -48px;
-    width: 615px;
+    left: -60px;
+    width: 635px;
     display: grid;
     grid-row-gap: 0px;
-    grid-template-columns: 125px 1fr 125px;
-    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 145px 1fr 145px;
+    grid-template-rows: 1fr .7fr 1fr .7fr 1fr;
     grid-template-areas: ". content-ibm ibm" "synth content-synth ." ". content-live-nation live-nation" ". . ." ". content-evolve-media evolve-media";
     .svg {
-      width: 125px;
+      width: 145px;
     }
   }
 
