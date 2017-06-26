@@ -1,5 +1,5 @@
 .icon__svg {
-  --transition-time: .35s;
+  --transition-time: .23s;
   &:hover {
     .icon__border {
       transform: rotate(180deg);
@@ -29,6 +29,11 @@
   stroke-width: 5px;
 }
 
+.icon__content,
+.icon__content--secondary {
+  transition: opacity .17s linear;
+}
+
 .svg__linkedin {
   .linkedin--outer,
   .linkedin--i,
@@ -44,6 +49,23 @@
     .linkedin--i,
     .linkedin--l {
       fill: var(--black);
+    }
+  }
+}
+
+.svg__github {
+
+  .icon__content--secondary {
+    opacity: 0;
+  }
+
+  &:hover {
+    .icon__content {
+      opacity: 0;
+    }
+
+    .icon__content--secondary {
+      opacity: 1;
     }
   }
 }

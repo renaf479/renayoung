@@ -14,9 +14,9 @@
     "css:build": "npm run css:sass && npm run css:postcss",
     "css:watch": "onchange \"./static-src/assets/src-sass/**/*.scss\" -- npm run css:build",
     "js:lint": "eslint ./static-src/assets/src-js/ || true",
-    "js:uglify": "uglifyjs ./static-src/assets/src-js/* -m -o ./static/assets/js/app.js --source-map ./static/assets/js/app.js.map --source-map-url app.js.map",
+    "js:uglify": "uglifyjs-folder ./static-src/assets/src-js -m -o ./static/assets/js/app.js --source-map ./static/assets/js/app.js.map --source-map-url app.js.map",
     "js:rollup": "rollup -c",
-    "js:build": "npm run js:lint && npm run js:uglify",
+    "js:build": "npm run js:uglify",
     "js:watch": "onchange \"./static-src/assets/src-js/**/*.js\" -- npm run js:build",
     "svg:compress": "svgo -f ./static-src/assets/src-svg/raw -o ./static-src/assets/src-svg/compressed",
     "svg:sprite": "svg-sprite-generate -d ./static-src/assets/src-svg/compressed -o ./themes/renayoung/layouts/partials/icons.svg",
@@ -47,16 +47,17 @@
     "eslint-plugin-promise": "^3.5.0",
     "imagemin": "^5.2.2",
     "node-sass": "4.5.2",
+    "normalize.css": "^6.0.0",
     "npm-run-all": "4.0.2",
     "onchange": "3.2.1",
     "postcss-cli": "3.1.1",
     "rollup": "^0.41.6",
     "rollup-plugin-node-resolve": "^3.0.0",
-    "normalize.css": "^6.0.0",
     "source-map": "0.5.6",
     "stylelint": "^7.10.1",
     "svg-sprite-generator": "0.0.7",
     "svgo": "^0.7.2",
-    "uglify-js": "2.8.22"
+    "uglify-js": "2.8.22",
+    "uglifyjs-folder": "^1.1.0"
   }
 }

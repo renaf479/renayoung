@@ -10,18 +10,18 @@
         <div class="timeline__bg">
             <svg class="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 1041">
                 <title>works-timeline</title>
-                <path d="M560.05,780c-2,103-185,38-185,142" transform="translate(-177.05)" style="fill: none;stroke: #163656;stroke-miterlimit: 10;stroke-width: 20px"/>
+                <path d="M560.2,780c-2,103-185,38-185,142" transform="translate(-177.05)" style="fill: none;stroke: #163656;stroke-miterlimit: 10;stroke-width: 20px"/>
                 <path d="M187.05,111c0,123,373,65,373,200" transform="translate(-177.05)" style="fill: none;stroke: #4c81c2;stroke-miterlimit: 10;stroke-width: 20px"/>
                 <path d="M187.05,0V776c0,107,188,49,188,146" transform="translate(-177.05)" style="fill: none;stroke: #fa8b08;stroke-miterlimit: 10;stroke-width: 20px"/>
                 <line x1="383" y1="591" x2="383" y2="401" style="fill: none;stroke: #e31b25;stroke-miterlimit: 10;stroke-width: 20px"/>
                 <line x1="383" y1="780" x2="383" y2="591" style="fill: none;stroke: #163656;stroke-miterlimit: 10;stroke-width: 20px"/>
-                <line x1="198" y1="922" x2="198" y2="1002" style="fill: none;stroke: #fa8b08;stroke-miterlimit: 10;stroke-width: 20px"/>
+                <line x1="198" y1="920" x2="198" y2="1002" style="fill: none;stroke: #fa8b08;stroke-miterlimit: 10;stroke-width: 20px"/>
                 <polygon points="198.32 1040.65 223.32 997.35 173.32 997.35 198.32 1040.65" style="fill: #fa8b08"/>
                 <line x1="383" y1="401" x2="383" y2="311" style="fill: none;stroke: #4c81c2;stroke-miterlimit: 10;stroke-width: 20px"/>
             </svg>
         </div>
         <section class="timeline__content">
-            <svg class="svg timeline__item__svg svg__synth" version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 110 110" xml:space="preserve">
+            <svg class="svg timeline__item__svg svg__synth" version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 110 110" xml:space="preserve" onclick="javascript:openDialog()">
                 <circle class="svg__border" fill="#ffffff" cx="55" cy="55" r="45.7" stroke-width="5px" stroke="#FA8B08"/>
                 <circle class="svg__hover" fill="#FA8B08" cx="55" cy="55" r="45.7"/>
                 <g class="svg__logo" fill="#FA8B08">
@@ -139,14 +139,17 @@
                     <li><em>{{ .Params.year }}</em></li>
                     <li><strong>{{ .Params.position }}</strong></li>
                 </ul>
-                <article id="company__{{ .Slug }}" class="company__description hidden">
-                    <h1 class="">{{ .Title }}</h1>
-                    {{ .Content }}
-                </article>
             </div>
             {{ end }}
         </section>
     </div>
-
-
 </div>
+
+{{ range where .Site.Pages "Type" "=" "companies" }}
+<aside id="company__{{ .Slug }}" class="avgrund-popup">
+    <article class="company__post">
+        <h1 class="">{{ .Title }}</h1>
+        {{ .Content }}
+    </article>
+</aside>
+{{ end }}
