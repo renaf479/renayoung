@@ -1,0 +1,10 @@
+{{ range where .Site.Pages "Type" "=" "companies" }}
+<aside id="company__{{ .Slug }}" class="avgrund-popup">
+    <article class="company__post">
+        <h1 class="">{{ .Title }}</h1>
+        {{ .Content }}
+    </article>
+</aside>
+{{ end }}
+
+<div class="avgrund-cover"></div>

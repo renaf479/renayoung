@@ -75,7 +75,6 @@ var Avgrund = (function(){
 		popup.classList.add( 'avgrund-popup-animate' );
 		activate();
 		return this;
-
 	}
 
 	function hide() {
@@ -91,7 +90,6 @@ var Avgrund = (function(){
 		disableBlur: disableBlur,
 		show: show,
 		hide: hide
-
 	}
 
 })();

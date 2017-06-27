@@ -21,7 +21,7 @@
             </svg>
         </div>
         <section class="timeline__content">
-            <svg class="svg timeline__item__svg svg__synth" version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 110 110" xml:space="preserve" onclick="javascript:openDialog()">
+            <svg class="svg timeline__item__svg svg__synth" version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 110 110" xml:space="preserve" data-slug="company__synth">
                 <circle class="svg__border" fill="#ffffff" cx="55" cy="55" r="45.7" stroke-width="5px" stroke="#FA8B08"/>
                 <circle class="svg__hover" fill="#FA8B08" cx="55" cy="55" r="45.7"/>
                 <g class="svg__logo" fill="#FA8B08">
@@ -32,7 +32,7 @@
                     <path d="M55.6,85.6h-8.3c0,0,13.3-6.2,14.2-15.4c0,0,1.4-9.8-3.3-13.9h2.7C60.9,56.3,70.5,73.3,55.6,85.6z"/>
                 </g>
             </svg>
-            <svg class="svg timeline__item__svg svg__ibm" version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 110 110" xml:space="preserve">
+            <svg class="svg timeline__item__svg svg__ibm" version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 110 110" xml:space="preserve" data-slug="company__ibm">
                 <circle class="svg__border" fill="#ffffff" cx="55" cy="55" r="45.7" stroke-width="5px" stroke="#4C81C2"/>
                 <circle class="svg__hover" fill="#4C81C2" cx="55" cy="55" r="45.7"/>
                 <g class="svg__logo" fill="#4C81C2">
@@ -88,7 +88,7 @@
                     <path d="M33.7,67.5v2.1H19.6v-2.1H33.7z"/>
                 </g>
             </svg>
-            <svg class="svg timeline__item__svg svg__livenation" version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 110 110" xml:space="preserve">
+            <svg class="svg timeline__item__svg svg__livenation" version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 110 110" xml:space="preserve" data-slug="company__livenation">
                 <circle class="svg__border" fill="#ffffff" cx="55" cy="55" r="45.7" stroke-width="5px" stroke="#e31b25"/>
                 <circle class="svg__hover" fill="#e31b25" cx="55" cy="55" r="45.7"/>
                 <g class="svg__logo">
@@ -101,7 +101,7 @@
                     <circle fill="#E31B25" cx="59.3" cy="21.7" r="7.4"/>
                 </g>
             </svg>
-            <svg class="svg timeline__item__svg svg__evolve" version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 110 110" xml:space="preserve">
+            <svg class="svg timeline__item__svg svg__evolve" version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 110 110" xml:space="preserve" data-slug="company__evolve">
                 <circle class="svg__border" fill="#ffffff" cx="55" cy="55" r="45.7" stroke-width="5px" stroke="#163656"/>
                 <circle class="svg__hover" fill="#163656" cx="55" cy="55" r="45.7"/>
                 <g class="svg__logo">
@@ -144,12 +144,3 @@
         </section>
     </div>
 </div>
-
-{{ range where .Site.Pages "Type" "=" "companies" }}
-<aside id="company__{{ .Slug }}" class="avgrund-popup">
-    <article class="company__post">
-        <h1 class="">{{ .Title }}</h1>
-        {{ .Content }}
-    </article>
-</aside>
-{{ end }}

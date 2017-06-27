@@ -1,6 +1,6 @@
 ---
 title: Live Nation
-slug: live-nation
+slug: livenation
 type: companies
 weight: 2
 year: Jan.2014 - May.2015

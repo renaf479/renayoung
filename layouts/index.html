@@ -4,7 +4,7 @@
         {{ partial "head.html" . }}
     </head>
     <body class="body">
-        <div class="site__content">
+        <div class="site__content avgrund-contents">
             <section class="landing section__wrapper">
                 {{ partial "landing.html" . }}
             </section>
@@ -18,6 +18,7 @@
                 {{ partial "contact.html" . }}
             </section>
         </div>
+        {{ partial "modal.html" . }}
         {{ partial "footer.html" . }}
         <script type="text/javascript" src="assets/js/app.js"></script>
     </body>
