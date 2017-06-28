@@ -8,6 +8,43 @@ html {
   box-sizing: inherit;
 }
 
+  ::-webkit-scrollbar {
+    width: var(--scrollbar-baseUnit);
+    height: var(--scrollbar-baseUnit);
+  }
+
+  ::-webkit-scrollbar-button {
+    width: 0px;
+    height: 0px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: rgba(#000, .5);
+    border-radius: calc(var(--scrollbar-baseUnit)/2);
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(#000, .7);
+  }
+
+  ::-webkit-scrollbar-thumb:active {
+    background-color: rgba(#000, 1);
+  }
+
+  ::-webkit-scrollbar-track {
+    background: rgba(#fff, .6);
+  }
+
+  ::-webkit-scrollbar-track:hover {
+  }
+
+  ::-webkit-scrollbar-track:active {
+  }
+
+  ::-webkit-scrollbar-corner {
+  background: transparent;
+  }
+
 menu {
   margin: 0;
   padding: 0;

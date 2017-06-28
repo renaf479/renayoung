@@ -41,7 +41,7 @@
   }
 
 .avgrund-popup {
-  background-color: pink;
+  background-color: var(--white);
   position: fixed;
   width: 90%;
   max-width: 700px;
@@ -51,8 +51,8 @@
   visibility: hidden;
   opacity: 0;
   z-index: 2;
-  padding: 20px;
-  border-radius: 3px;
+  padding: 18px 0;
+  border-radius: 4px;
   transform: scale( 0.8 ) translate(-50%, -50%);
 }
   .avgrund-active .avgrund-popup-animate {

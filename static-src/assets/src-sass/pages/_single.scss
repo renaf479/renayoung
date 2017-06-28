@@ -1,16 +1,36 @@
 .single__iframe {
+  --overscan: 100px;
+  --overscanMargin: calc(var(--overscan) * -1);
+  --overscanImageWidth: 200px;
+  --overscanImageOpacity: .8;
+
   border: 0 none;
-  width: 120%;
+  width: calc(100% + var(--overscan) + var(--scrollbar-baseUnit));
   height: 100%;
-  margin: 0 -10%;
+  margin-left: var(--overscanMargin);
+}
+
+.single__body {
+  display: flex;
+  flex-direction: row;
 }
 
   .image__left {
     float: left;
     clear: both;
-    margin: 8px 16px 8px 0;
+    margin: 8px 0;
+    max-width: var(--overscanImageWidth);
     //mask-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0,1), to(rgba(0, 0, 0, 0))));
-    -webkit-mask-image: linear-gradient(to right, rgba(#000, 0.5) 0, rgba(#000, 0.5) 10%, rgba(#fff, 1) 10%, rgba(#fff, 1) 100%);
+    -webkit-mask-image: linear-gradient(to right, rgba(#000, 0.8) 0, rgba(#000, 0.8) 50%, rgba(#000, 1) 50%, rgba(#000, 1) 100%);
+  }
+
+  .single__imagesLeft {
+    min-width: var(--overscan);
+    flex: 0 0 100px;
+  }
+
+  .single__content {
+    padding: 0 16px;
   }
 
   .images__right {

@@ -4,7 +4,7 @@
   "description": "Portfolio site",
   "main": "app.js",
   "scripts": {
-    "start": "npm run assets:build && npm-run-all -p css:watch js:watch svg:watch run:hugo",
+    "start": "npm run assets:build && npm-run-all css:build js:build && npm-run-all -p css:watch js:watch svg:watch run:hugo",
     "assets:clean": "rm -rf ./static/assets/js/* static/assets/css/* static-src/assets/src-svg/compressed/*",
     "assets:build": "npm run assets:clean && npm-run-all css:build",
     "build": "npm run assets:build && hugo",
