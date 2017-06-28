@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {{ partial "head.html" . }}
+    </head>
+    <body class="single__body company__{{ .Slug }}">
+
+        {{ if .Params.imagesLeft }}
+        <aside class="single__imagesLeft">
+            {{ range $index, $image := .Params.imagesLeft }}
+                <img src="{{ . }}" class="image__left"/>
+            {{ end }}
+        </aside>
+        {{ end }}
+
+        <article class="single__content">
+            <h1 class="single__title">{{ .Title }}</h1>
+            {{ .Content }}
+        </article>
+
+        {{ if .Params.imagesRight }}
+        <aside class="single__imagesRight">
+            {{ range $index, $image := .Params.imagesRight }}
+            <img src="{{ . }}" class="image__right"/>
+            {{ end }}
+        </aside>
+        {{ end }}
+    </body>
+</html>

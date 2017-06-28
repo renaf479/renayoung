@@ -9,6 +9,10 @@ ignoreFiles = ["\\static-src$"]
         name = "Serena Young"
         title = "Web Developer"
 
+    [params.works]
+        title = "Works"
+        content = "A selection of the works I've helped create"
+
     [params.social.linkedin]
         title = "Linkedin"
         url = "https://www.linkedin.com/in/renaf/"
@@ -28,3 +32,5 @@ ignoreFiles = ["\\static-src$"]
 year = "years"
 slug = "slugs"
 position = "positions"
+imageLeft = "imagesLeft"
+imageRight = "imagesRight"

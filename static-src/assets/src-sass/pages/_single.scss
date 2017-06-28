@@ -1,0 +1,28 @@
+.single__iframe {
+  border: 0 none;
+  width: 120%;
+  height: 100%;
+  margin: 0 -10%;
+}
+
+  .image__left {
+    float: left;
+    clear: both;
+    margin: 8px 16px 8px 0;
+    //mask-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0,1), to(rgba(0, 0, 0, 0))));
+    -webkit-mask-image: linear-gradient(to right, rgba(#000, 0.5) 0, rgba(#000, 0.5) 10%, rgba(#fff, 1) 10%, rgba(#fff, 1) 100%);
+  }
+
+  .images__right {
+    float: right;
+    clear: both;
+    margin: 8px 0 8px 16px;
+  }
+
+@include media(">laptop") {
+
+}
+
+@include media(">desktop") {
+
+}

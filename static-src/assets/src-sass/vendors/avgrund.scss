@@ -6,7 +6,7 @@
  * Created by Hakim El Hattab, http://hakim.se
  */
 
-.avgrund-active body {
+.avgrund-active .site__content {
   transform: scale( 0.9 );
 }
 
@@ -42,8 +42,8 @@
 
 .avgrund-popup {
   background-color: pink;
-  position: absolute;
-  width: 80%;
+  position: fixed;
+  width: 90%;
   max-width: 700px;
   height: 500px;
   left: 50%;
@@ -67,16 +67,16 @@
     transform: scale( 1.1 ) translate(-50%, -50%);
   }
 
-.avgrund-ready body,
+.avgrund-ready .site__content,
 .avgrund-ready .avgrund-contents,
 .avgrund-ready .avgrund-cover {
   transform-origin: 50% 50%;
-  transition: 0.3s all cubic-bezier(0.250, 0.460, 0.450, 0.940);
+  transition: .3s all cubic-bezier(0.250, 0.460, 0.450, 0.940);
 }
 
 .avgrund-ready .avgrund-popup {
   transform-origin: 0 0;
-  transition: 0.3s all cubic-bezier(0.250, 0.460, 0.450, 0.940);
+  transition: .3s all cubic-bezier(0.250, 0.460, 0.450, 0.940);
 }
 
 .avgrund-ready .avgrund-popup.no-transition {

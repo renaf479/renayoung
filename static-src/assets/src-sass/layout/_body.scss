@@ -1,4 +1,4 @@
-body {
+.body {
   background-color: var(--site-bgColor);
 }
 
@@ -16,6 +16,7 @@ h1, h2, h3 {
   background-color: var(--bgColor);
   width: 98%;
   max-width: 100%;
+  overflow-x: hidden;
 }
 
 .section__wrapper {
@@ -24,9 +25,8 @@ h1, h2, h3 {
 
   .section__content {
     position: relative;
-    width: 100%;
+    width: var(--site-content-width);
     padding: 0 16px;
-    max-width: var(--site-content-width);
     margin: 0 auto;
   }
 
