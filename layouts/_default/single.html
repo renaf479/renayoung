@@ -6,7 +6,7 @@
     <body class="single__body company__{{ .Slug }}">
         <aside class="single__imagesLeft">
             {{ range $index, $image := .Params.imagesLeft }}
-                <img src="{{ . }}" class="image__left"/>
+                <img src="{{ . }}" class="image__left" style="animation-delay: calc(({{ $index }} + 1) * .27s);"/>
             {{ end }}
         </aside>
 

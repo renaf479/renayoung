@@ -1,3 +1,19 @@
+@keyframes galleryLoad {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes type {
+  to {
+    width: 100%;
+  }
+}
+
 .single__iframe {
   --overscan: 100px;
   --overscanMargin: calc(var(--overscan) * -1);
@@ -5,7 +21,7 @@
   --overscanImageOpacity: .8;
 
   border: 0 none;
-  width: calc(100% + var(--overscan) + var(--scrollbar-baseUnit));
+  width: calc(100% + var(--overscan) + var(--scrollbar-baseUnit) + 4px);
   height: 100%;
   margin-left: var(--overscanMargin);
 }
@@ -15,29 +31,37 @@
   flex-direction: row;
 }
 
-  .image__left {
-    float: left;
-    clear: both;
-    margin: 8px 0;
-    max-width: var(--overscanImageWidth);
-    //mask-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0,1), to(rgba(0, 0, 0, 0))));
-    -webkit-mask-image: linear-gradient(to right, rgba(#000, 0.8) 0, rgba(#000, 0.8) 50%, rgba(#000, 1) 50%, rgba(#000, 1) 100%);
-  }
-
   .single__imagesLeft {
     min-width: var(--overscan);
     flex: 0 0 100px;
   }
 
+    .image__left {
+      animation: .37s ease-out 0s 1 galleryLoad forwards;
+      opacity: 0;
+      transform: translate(50px, 0);
+      float: left;
+      clear: both;
+      margin: 8px 0;
+      max-width: var(--overscanImageWidth);
+      -webkit-mask-image: linear-gradient(to right, rgba(#000, 0.7) 0, rgba(#000, 0.7) 50%, rgba(#000, 1) 50%, rgba(#000, 1) 100%);
+    }
+
   .single__content {
     padding: 0 16px;
+
+    img {
+      display: block;
+      margin: auto;
+    }
   }
 
-  .images__right {
-    float: right;
-    clear: both;
-    margin: 8px 0 8px 16px;
-  }
+    .single__title {
+      overflow: hidden;
+      white-space: nowrap;
+      width: 0;
+      animation: 2s steps(60, end) .35s 1 type forwards;
+    }
 
 @include media(">laptop") {
 

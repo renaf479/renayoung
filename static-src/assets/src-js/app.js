@@ -16,21 +16,20 @@ function openDialog() {
     }
 }
 
+function closeDialog() {
+    Avgrund.hide('.avgrund-popup');
+}
+
 Array.from(workNodes).forEach((workItem) => {
     workItem.addEventListener('click', openDialog);
 });
 
-/*
+avgrundWrapper.getElementsByClassName('modal__close')[0].addEventListener('mouseup', closeDialog);
 
-var wrapper = document.querySelector(".wrapper");
 
-var divs = wrapper.getElementsByTagName("div");
-
-for (i = 0; i < divs.length; ++i) {
-    each = divs[i];
-    if (each.classList.contains("test2")) {
-        each.style.display = "none";
-    }
+//DEBUG
+avgrundIframe.src = '/works/ibm';
+avgrundIframe.onload = function() {
+    Avgrund.show('.avgrund-popup');
 }
-*/
 

@@ -1,0 +1,75 @@
+.modal {
+  position: fixed;
+  width: 90%;
+  max-width: 800px;
+  height: 70vh;
+  left: 50%;
+  top: 50%;
+  padding: 18px 0;
+}
+
+  .modal__bg__base,
+  .modal__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .modal__bg__base {
+    background-color: var(--bgColor);
+    z-index: 0;
+    clip-path: polygon(0 0, 95.1% 0, 100% 4.9%, 100% 100%, 0 100%);
+  }
+
+  .modal__bg {
+    background-color: var(--white);
+    z-index: 10;
+    clip-path: polygon(0 15%, 100% 30%, 100% 75%, 0% 90%);
+  }
+
+  .modal__iframe {
+    position: relative;
+    z-index: 100;
+  }
+
+  .modal__close {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: var(--black);
+    font-weight: bold;
+    background-color: var(--bgColor);
+    width: 5%;
+    height: 5%;
+    border: none;
+    z-index: 150;
+    clip-path: polygon(0 0, 100% 0, 100% 100%);
+    transition: color .17s linear, background-color .17s linear, top .17s linear, right .17s linear, width .17s linear, height .17s linear;
+
+    &:hover {
+      background-color: var(--red);
+      color: var(--white);
+      top: -6.5px;
+      right: -6.5px;
+      width: 6%;
+      height: 6%;
+    }
+
+    &:active {
+      outline: none;
+      background-color: var(--red-400);
+      top: -3px;
+      right: -3px;
+      width: 5.5%;
+      height: 5.5%;
+    }
+  }
+
+    .modal__close__text {
+      position: absolute;
+      top: 5px;
+      right: 10px;
+    }
