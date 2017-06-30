@@ -17,10 +17,47 @@
     height: 100%;
   }
 
-    .contact__cta {
-      width: 52px;
+    .contact__links {
+      width: 240px;
+      margin: 22px auto;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 120px);
+      grid-template-areas:
+        "contact contact"
+        "linkedin github";
     }
 
+      .contact__link {
+        cursor: pointer;
+        transition: transform .16s linear;
+        &:hover {
+          transform: scale(1.1);
+        }
+
+        &:active {
+          transform: scale(.97);
+        }
+
+        .svg {
+          height: 100%;
+        }
+      }
+
+    .contact__cta {
+      grid-area: contact;
+      justify-self: center;
+      margin-bottom: -30px;
+    }
+
+    .contact__linkedin {
+      grid-area: linkedin;
+      justify-self: end;
+    }
+
+    .contact__github {
+      grid-area: github;
+    }
 
 @include media(">mobile") {
   .contact__bg {
@@ -32,11 +69,10 @@
     }
 
     .contact__cta {
-      width: 150px;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
+
+      &:hover {
+
+      }
     }
 }
 

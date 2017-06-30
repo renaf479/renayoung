@@ -1,11 +1,26 @@
-.modal {
-  position: fixed;
+.work__modal {
   width: 90%;
   max-width: 800px;
+  padding: 18px 0;
+}
+
+.contact__modal {
+  width: 100%;
+  max-width: 600px;
+
+  .modal__iframe {
+    width: 100%;
+    height: 100%;
+    border: 0 none;
+  }
+}
+
+.modal {
+  --closeBtnUnit: 32px;
+  position: fixed;
   height: 70vh;
   left: 50%;
   top: 50%;
-  padding: 18px 0;
 }
 
   .modal__bg__base,
@@ -42,8 +57,8 @@
     color: var(--black);
     font-weight: bold;
     background-color: var(--bgColor);
-    width: 5%;
-    height: 5%;
+    width: calc(var(--closeBtnUnit) + 1px);
+    height: calc(var(--closeBtnUnit) + 1px);
     border: none;
     z-index: 150;
     clip-path: polygon(0 0, 100% 0, 100% 100%);
@@ -52,10 +67,10 @@
     &:hover {
       background-color: var(--red);
       color: var(--white);
-      top: -6.5px;
-      right: -6.5px;
-      width: 6%;
-      height: 6%;
+      top: -5px;
+      right: -5px;
+      width: 36px;
+      height: 36px;
     }
 
     &:active {
@@ -63,13 +78,27 @@
       background-color: var(--red-400);
       top: -3px;
       right: -3px;
-      width: 5.5%;
-      height: 5.5%;
+      width: 28px;
+      height: 28px;
     }
   }
 
     .modal__close__text {
       position: absolute;
-      top: 5px;
-      right: 10px;
+      top: 2px;
+      right: 5px;
     }
+
+@include media(">mobile") {
+  .modal__bg__base {
+    clip-path: polygon(0 0, calc(100% - var(--closeBtnUnit)) 0, 100% var(--closeBtnUnit), 100% 100%, 0 100%);
+  }
+}
+
+@include media(">laptop") {
+
+}
+
+@include media(">desktop") {
+
+}

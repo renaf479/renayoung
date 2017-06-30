@@ -25,7 +25,7 @@ h1, h2, h3 {
 
   .section__content {
     position: relative;
-    width: var(--site-content-width);
+    width: 100%;
     padding: 0 16px;
     margin: 0 auto;
   }
@@ -47,13 +47,15 @@ h1, h2, h3 {
 }
 
 @include media(">laptop") {
-
+  .section__content {
+    width: var(--site-content-width);
+  }
 }
 
 @include media(">desktop") {
 
   .site__content {
-    width: 1201px;
+    width: 1200px;
   }
 
 

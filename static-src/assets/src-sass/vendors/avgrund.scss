@@ -19,7 +19,7 @@
   z-index: 1;
   visibility: hidden;
   opacity: 0;
-  background: rgba( 0, 0, 0, 0.5 );
+  background: rgba( 0, 0, 0, 0.7 );
 }
   .avgrund-active .avgrund-cover {
     visibility: visible;
@@ -44,10 +44,12 @@
   position: fixed;
   opacity: 0;
   z-index: 2;
+  visibility: hidden;
   transform: scale( 0.8 ) translate(-50%, -50%);
 }
   .avgrund-active .avgrund-popup-animate {
     opacity: 1;
+    visibility: visible;
     transform: scale( 1.1 ) translate(-50%, -50%);
   }
   .avgrund-popup.stack {

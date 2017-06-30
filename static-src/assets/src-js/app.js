@@ -1,35 +1,47 @@
 "use strict";
 
 const worksWrapper = document.querySelector('.works');
-const avgrundWrapper = document.querySelector('.avgrund-popup');
+const contactWrapper = document.querySelector('.contact__cta');
+const workModalWrapper = document.querySelector('.work__modal');
+const contactModalWrapper = document.querySelector('.contact__modal');
 
 let workNodes = worksWrapper.getElementsByClassName('timeline__item__svg');
-let avgrundIframe = avgrundWrapper.getElementsByClassName('single__iframe')[0];
+let workModalIframe = workModalWrapper.getElementsByClassName('single__iframe')[0];
 
-function openDialog() {
+function _openWorkModal() {
     let slug = this.dataset.slug;
     let iframeSrc = '/works/' + slug;
 
-    avgrundIframe.src = iframeSrc;
-    avgrundIframe.onload = function() {
-        Avgrund.show('.avgrund-popup');
+    workModalIframe.src = iframeSrc;
+    workModalIframe.onload = function() {
+        Avgrund.show('.work__modal');
     }
 }
 
-function closeDialog() {
-    Avgrund.hide('.avgrund-popup');
+function _closeWorkModal() {
+    Avgrund.hide('.work__modal');
+}
+
+function _openContactModal() {
+    Avgrund.show('.contact__modal');
+}
+
+function _closeContactModal() {
+    Avgrund.hide('.contact__modal');
 }
 
 Array.from(workNodes).forEach((workItem) => {
-    workItem.addEventListener('click', openDialog);
+    workItem.addEventListener('mouseup', _openWorkModal);
 });
 
-avgrundWrapper.getElementsByClassName('modal__close')[0].addEventListener('mouseup', closeDialog);
+contactWrapper.addEventListener('mouseup', _openContactModal);
+workModalWrapper.getElementsByClassName('modal__close')[0].addEventListener('mouseup', _closeWorkModal);
+contactModalWrapper.getElementsByClassName('modal__close')[0].addEventListener('mouseup', _closeContactModal);
 
 
 //DEBUG
-avgrundIframe.src = '/works/ibm';
+/*avgrundIframe.src = '/works/ibm';
 avgrundIframe.onload = function() {
     Avgrund.show('.avgrund-popup');
-}
+}*/
 

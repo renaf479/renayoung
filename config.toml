@@ -1,5 +1,5 @@
 baseURL = "http://www.renayoung.com/"
-title = "Site"
+title = "Serena Young | Portfolio"
 languageCode = "en-us"
 ignoreFiles = ["\\static-src$"]
 
@@ -28,10 +28,13 @@ ignoreFiles = ["\\static-src$"]
         url = "https://github.com/renaf479"
         slug = "resume"
 
+    [params.contact]
+        title = "Say Hi!"
+        url = "https://goo.gl/forms/LnOcdaBegdyMlH2B3"
+
 [taxonomies]
 year = "years"
 slug = "slugs"
 position = "positions"
 imageLeft = "imagesLeft"
-imageRight = "imagesRight"
 primaryColor = "primaryColor"

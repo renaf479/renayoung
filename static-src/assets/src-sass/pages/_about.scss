@@ -115,7 +115,7 @@
 
     .about__title {
       grid-area: header;
-      background-image: linear-gradient(7deg, #ffffff 0%, #ffffff 47%, #000000 47%, #000000 100%);
+      background-image: linear-gradient(3deg, #ffffff 0%, #ffffff 46%, #000000 46%, #000000 100%);
       color: transparent;
       -webkit-background-clip: text;
       background-clip: text;
@@ -195,99 +195,3 @@
 @include media(">desktop") {
 
 }
-
-
-/*
-#about {
-  color: var(--textWhite);
-  height: var(--about-height);
-  top: var(--about-top);
-}
-
-.about-bio__wrapper {
-  position: absolute;
-  right: 0;
-  top: 75px;
-  text-align: right;
-  width: 50%;
-}
-
-.about-bio__content {
-  font-size: 1.2em;
-  line-height: 1.6em;
-  p {
-    margin: 0;
-  }
-}
-
-.about-bio__title {
-  position: relative;
-  color: var(--black);
-
-  &:before {
-    content: attr(data-content);
-    position: absolute;
-    top: 0;
-    color: var(--white);
-    clip-path: polygon(100% -58%, 13% 100%, 100% 100%);
-  }
-}
-
-.about-bio__shape {
-  background-color: purple;
-  opacity: .5;
-  clip-path: polygon(0 0, 0% 100%, 100% 0);
-  shape-outside: polygon(0 0, 0% 100%, 100% 0);
-  width: 270px;
-  height: 190px;
-  float: left;
-}
-
-.about__resume {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-
-  .svg__profile {
-    width: 100px;
-  }
-}
-
-.about__cloud {
-  position: absolute;
-  top: 170px;
-  left: 65px;
-  width: 300px;
-  transform: rotate(-58deg);
-  transform-origin: 50% 50%;
-  display: none;
-}
-
-.svg__skillCloud {
-  width: inherit;
-
-  .title {
-    fill: var(--offWhite);
-  }
-
-  .pillar {
-    fill: #9E9E9E;
-    font-weight: 500;
-  }
-
-  .sub {
-    fill: #424242;
-    font-weight: 500;
-  }
-}
-
-@media (min-width: $breakpoint-medium) {
-
-}
-
-@media (min-width: $breakpoint-large) {
-  .about__cloud {
-    display: block;
-  }
-}*/
