@@ -13,6 +13,10 @@ ignoreFiles = ["\\static-src$"]
         title = "Works"
         content = "A selection of the works I've helped create"
 
+    [params.contact]
+        title = "Say Hi!"
+        url = "https://goo.gl/forms/LnOcdaBegdyMlH2B3"
+
     [params.social.linkedin]
         title = "Linkedin"
         url = "https://www.linkedin.com/in/renaf/"
@@ -27,10 +31,6 @@ ignoreFiles = ["\\static-src$"]
         title = "Resume"
         url = "https://github.com/renaf479"
         slug = "resume"
-
-    [params.contact]
-        title = "Say Hi!"
-        url = "https://goo.gl/forms/LnOcdaBegdyMlH2B3"
 
 [taxonomies]
 year = "years"

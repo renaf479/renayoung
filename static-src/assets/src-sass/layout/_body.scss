@@ -1,3 +1,10 @@
+body {
+  &:before {
+    content: 'mobile';
+    display: none;
+  }
+}
+
 .body {
   background-color: var(--site-bgColor);
 }
@@ -31,6 +38,12 @@ h1, h2, h3 {
   }
 
 @include media(">mobile") {
+  body {
+    &:before {
+      content: 'tablet';
+    }
+  }
+
   .site__content {
     width: 100%;
     margin: 0 auto;
@@ -47,6 +60,12 @@ h1, h2, h3 {
 }
 
 @include media(">laptop") {
+  body {
+    &:before {
+      content: 'desktop';
+    }
+  }
+
   .section__content {
     width: var(--site-content-width);
   }

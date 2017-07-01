@@ -9,8 +9,8 @@
     width: 100%;
     height: 100%;
     background-color: var(--works-bgColor);
-    clip-path: polygon(0 10%, 100% 15%, 100% 70%, 0% 75%);
-
+    clip-path: polygon(0 10%, 100% 25%, 100% 70%, 0% 85%);
+    transition: clip-path .2s;
   }
 
   .works__timeline {
@@ -162,7 +162,7 @@
 
   .works__bg {
     background-color: var(--works-bgColor);
-
+    clip-path: polygon(0 10%, 100% 15%, 100% 70%, 0% 75%);
   }
 
   .works__title {

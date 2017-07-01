@@ -1,6 +1,5 @@
 .contact {
   height: var(--contact-height);
-  transition: clip-path .5s ease;
 }
 
   .contact__bg {
@@ -9,7 +8,8 @@
     height: 100%;
     background: var(--contact-bgColor);
     background: linear-gradient(to top, var(--contact-bgColor), var(--contact-bgColor-secondary));
-    clip-path: polygon(0 5%, 100% 0, 100% 100%, 0% 100%);
+    clip-path: polygon(0 0, 100% 5%, 100% 5%, 100% 100%, 0% 100%);
+    transition: clip-path .2s;
   }
 
   .connect__wrapper {
@@ -18,7 +18,7 @@
   }
 
     .contact__links {
-      width: 240px;
+      width: 208px;
       margin: 22px auto;
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -40,6 +40,7 @@
         }
 
         .svg {
+          width: auto;
           height: 100%;
         }
       }
@@ -52,7 +53,6 @@
 
     .contact__linkedin {
       grid-area: linkedin;
-      justify-self: end;
     }
 
     .contact__github {

@@ -1,5 +1,94 @@
+@keyframes music-notes {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(0, 5px);
+  }
+}
+
+@keyframes tea-steeper {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(2px, 0);
+  }
+}
+
+@keyframes tea-steam {
+  0%, 100% {
+    transform: translate(0, 0) scale(1, 1);
+  }
+  50% {
+    transform: translate(3px, 0) scale(.8, 1);
+  }
+}
+
+@keyframes cat-eyes {
+  0%, 100% {
+    transform: scale(1, 1);
+  }
+  30%, 70% {
+    transform: scale(1, .3);
+  }
+}
+
+@keyframes cat-eyes-blink {
+  0%, 6%, 100% {
+    transform: scale(1, 1);
+  }
+  2% {
+    transform: scale(.4, .1);
+  }
+}
+
+@keyframes safie-tail {
+  0%, 100% {
+    transform: rotate(0);
+  }
+  40%, 70% {
+    transform: rotate(-5deg);
+  }
+}
+
+@keyframes serena-hands {
+  0%, 100% {
+    transform: translate(-5px, 0);
+  }
+  70% {
+    transform: translate(5px, 0);
+  }
+}
+
+@keyframes serena-leg {
+  0%, 100% {
+    transform: rotate(0);
+  }
+  50% {
+    transform: rotate(.7deg);
+  }
+}
+
+@keyframes leaves-left {
+  0%, 100% {
+    transform: rotate(0);
+  }
+  50% {
+    transform: rotate(6deg);
+  }
+}
+
+@keyframes leaves-right {
+  0%, 100% {
+    transform: rotate(0);
+  }
+  50% {
+    transform: rotate(-6deg);
+  }
+}
+
 .landing {
-  height: 70vh;
   background: var(--landing-bgColor);
   background: linear-gradient(to top, var(--landing-bgColor), var(--landing-bgColor-secondary));
   transition: height .5s ease;
@@ -7,48 +96,103 @@
 }
 
   .landing__content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     width: 100%;
-    max-width: 750px;
+    max-width: var(--site-content-width);
+    margin: 0 auto;
+    display: block;
+  }
+
+  .landing__svg--animate {
+    transform-origin: 50% 50%;
+  }
+
+  .music-notes {
+    .landing__svg--animate {
+      animation-name: music-notes;
+      animation-iteration-count: infinite;
+    }
+
+    .music-notes__1 {
+      animation-duration: 5s;
+    }
+
+    .music-notes__2 {
+      animation-duration: 4s;
+      animation-delay: .5s;
+    }
+
+    .music-notes__3 {
+      animation-duration: 7s;
+      animation-delay: .2s;
+    }
+  }
+
+  .tea {
+    .tea__cup__steeper {
+      animation: tea-steeper 10s infinite;
+    }
+
+    .tea__steam__large {
+      animation: tea-steam 5s infinite;
+    }
+
+    .tea__steam__small {
+      animation: tea-steam 8s .4s infinite;
+    }
+  }
+
+  .safie__eyes {
+    .landing__svg--animate {
+      animation-name: cat-eyes;
+      animation-iteration-count: infinite;
+    }
+
+    .safie__eyes__left,
+    .safie__eyes__right {
+      animation-duration: 15s;
+    }
+  }
+
+  .safie__tail {
+    transform-origin: 100% 0%;
+    animation: safie-tail 7s infinite;
+  }
+
+  .pace__tail {
+    transform-origin: 100% 100%;
+    animation: safie-tail 3s .5s infinite;
+  }
+
+  .pace__eyes {
+    .pace__eyes__left,
+    .pace__eyes__right {
+      animation: cat-eyes-blink 5s infinite;
+    }
+  }
+
+  .serena__hand__left {
+    animation: serena-hands 6s 2s infinite;
+  }
+
+  .serena__leg {
+    transform-origin: 0 0;
+    animation: serena-leg 10s infinite;
+  }
+
+  .plant {
+    .leaf--right {
+      transform-origin: 0% 50%;
+      animation: leaves-right 8s infinite;
+    }
+
+    .leaf--left {
+      transform-origin: 100% 100%;
+      animation: leaves-left 8s infinite;
+    }
   }
 
 @include media(">laptop") {
-  .landing {
-    height: var(--landing-height);
-  }
-
-    .landing__content {
-
-    }
 }
 
 @include media(">desktop") {
 }
-
-
-
-/*
-#landing {
-  color: var(--textWhite);
-  height: calc(var(--landing-height) - 200px);
-  top: var(--landing-top);
-}
-
-.landing__wrapper {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  display: flex;
-}
-
-.landing__avatar {
-  width: 250px;
-}
-
-.landingAvatar__image {
-  width: 100%;
-}*/
