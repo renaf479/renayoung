@@ -6,8 +6,7 @@ ignoreFiles = ["\\static-src$"]
 [params]
 
     [params.landing]
-        name = "Serena Young"
-        title = "Web Developer"
+        title = "Serena Young"
 
     [params.works]
         title = "Works"

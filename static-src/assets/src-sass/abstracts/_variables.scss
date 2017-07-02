@@ -29,9 +29,10 @@
 
 
   --contact-height: 500px;
+  --contact-height-mobile: 400px;
 
 
-  --site-content-width: 800px;
+  --site-content-width: 850px;
   --scrollbar-baseUnit: 5px;
 
 
@@ -44,11 +45,8 @@ $breakpoint-large: 1000px;
 $breakpoint-medium: 800px;
 $breakpoint-small: 500px;
 
-$white: #f0f0f0;
-$black: #000000;
-
 $breakpoints:(
   'mobile': 768px,
-  'laptop': 1025px,
-  'desktop': 1200px
+  'laptop': 850px,
+  'desktop': 1025px
 );

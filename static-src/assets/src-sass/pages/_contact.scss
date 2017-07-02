@@ -1,5 +1,5 @@
 .contact {
-  height: var(--contact-height);
+  height: var(--contact-height-mobile);
 }
 
   .contact__bg {
@@ -10,6 +10,12 @@
     background: linear-gradient(to top, var(--contact-bgColor), var(--contact-bgColor-secondary));
     clip-path: polygon(0 0, 100% 5%, 100% 5%, 100% 100%, 0% 100%);
     transition: clip-path .2s;
+  }
+
+
+  .contact__title {
+    text-align: center;
+    color: var(--white);
   }
 
   .connect__wrapper {
@@ -60,13 +66,17 @@
     }
 
 @include media(">mobile") {
+  .contact {
+    height: var(--contact-height);
+  }
+
   .contact__bg {
     clip-path: polygon(0 0, 50% 50%, 100% 0, 100% 100%, 0% 100%);
   }
-  
-    .contact__title {
-      text-align: center;
-    }
+
+  .contact__title {
+    color: var(--black);
+  }
 
     .contact__cta {
 

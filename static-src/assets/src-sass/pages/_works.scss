@@ -126,6 +126,7 @@
     }
 
   .company__content {
+    font-size: .9em;
     padding: 0 8px;
     text-align: left;
     align-self: center;
@@ -230,50 +231,3 @@
 
 @include media(">desktop") {
 }
-
-
-/*
-#works {
-  color: var(--textWhite);
-  height: var(--works-height);
-  top: var(--works-top);
-}
-
-.works__title {
-  position: relative;
-  text-align: center;
-  color: var(--black);
-
-  &:before {
-    content: attr(data-content);
-    position: absolute;
-    top: 0;
-    color: var(--white);
-    clip-path: polygon(10% 0, 100% 165%, 100% 0);
-  }
-}
-
-.works__content {
-  position: relative;
-  text-align: center;
-  color: var(--black);
-  &:before {
-    content: attr(data-content);
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translate(-50%, 0);
-    text-align: center;
-    color: var(--white);
-    clip-path: polygon(81% 0, 100% 0%, 100% 100%, 93% 100%);
-  }
-}
-
-.works__shape {
-
-  shape-outside: polygon(0 0, 100% 100%, 0 100%);
-  width: 415px;
-  height: inherit;
-  float: left;
-
-}*/

@@ -8,12 +8,6 @@
   }
 }
 
-@keyframes type {
-  to {
-    width: 100%;
-  }
-}
-
 .single__iframe {
   --overscan: 100px;
   --overscanMargin: calc(var(--overscan) * -1);
@@ -60,7 +54,7 @@
       overflow: hidden;
       white-space: nowrap;
       width: 0;
-      animation: 2s steps(60, end) .35s 1 type forwards;
+      animation: 2s steps(60, end) .35s 1 typing forwards;
     }
 
 @include media(">laptop") {

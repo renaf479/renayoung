@@ -7,6 +7,10 @@ body {
 
 .body {
   background-color: var(--site-bgColor);
+
+  &.loading {
+    overflow: hidden;
+  }
 }
 
 h1, h2, h3 {

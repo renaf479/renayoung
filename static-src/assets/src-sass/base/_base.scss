@@ -33,6 +33,7 @@ html {
 
   ::-webkit-scrollbar-track {
     background: rgba(#fff, .8);
+    border-radius: calc(var(--scrollbar-baseUnit)/2);
   }
 
   ::-webkit-scrollbar-track:hover {
@@ -65,6 +66,11 @@ menu {
 
 .hidden {
   display: none;
+}
+
+.hidden--animated {
+  opacity: 0;
+  transition: opacity .6s .4s;
 }
 
 .link--nostyle {

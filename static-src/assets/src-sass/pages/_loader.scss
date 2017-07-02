@@ -1,0 +1,78 @@
+@keyframes process {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: inherit;
+    line-height: inherit;
+    visibility: visible;
+  }
+}
+
+.loader {
+  position: fixed;
+  z-index: 1000;
+  background: #272823;
+  color: #f1f1e4;
+  width: 100vw;
+  height: 100vh;
+}
+
+  .loader__content {
+    position: absolute;
+    display: inline-block;
+    font-size: 1.4em;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+    .home--user {
+      color: #ff5181;
+    }
+
+    .home--group {
+      color: #c0e825;
+    }
+
+    .home--path {
+      color: #73e9ff;
+    }
+
+    .process__command {
+      display: flex;
+      flex-direction: row;
+    }
+      .command--start {
+        color: #d0a6fd;
+      }
+
+      .command--call {
+        text-indent: 5px;
+        overflow: hidden;
+        white-space: nowrap;
+        width: 0;
+        animation: 3s steps(60, end) .7s 1 typing forwards;
+      }
+
+    .process__run {
+      visibility: hidden;
+      height: 0;
+      line-height: 0;
+    }
+
+    .process__run--1 {
+      animation: 1s steps(1, end) 1s 1 process forwards;
+    }
+
+    .process__run--2 {
+      animation: 1s steps(1, end) 1.4s 1 process forwards;
+    }
+
+    .process__run--3 {
+      animation: 1s steps(1, end) 1.6s 1 process forwards;
+    }
+
+    .process__run--4 {
+      animation: 1s steps(1, end) 2.5s 1 process forwards;
+    }
