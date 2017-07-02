@@ -35,10 +35,7 @@ function _openContactModal() {
     if(breakpoint.value === 'mobile') {
         console.log('here');
     } else {
-        contactModalIframeNode.src = contactModalIframeNode.dataset.src;
-        contactModalIframeNode.onload = () => {
-            Avgrund.show('.contact__modal');
-        };
+        Avgrund.show('.contact__modal');
     }
 }
 
@@ -47,13 +44,16 @@ function _closeContactModal() {
 }
 
 function _loaderComplete() {
-    window.scrollTo(0, 0);
-    loaderWrapper.classList.add('hidden--animated');
-    document.body.classList.remove('loading');
+    contactModalIframeNode.src = contactModalIframeNode.dataset.src;
+    contactModalIframeNode.onload = () => {
+        window.scrollTo(0, 0);
+        loaderWrapper.classList.add('hidden--animated');
+        document.body.classList.remove('loading');
 
-    setTimeout(function() {
-        document.body.removeChild(loaderWrapper);
-    }, 1000);
+        setTimeout(function() {
+            document.body.removeChild(loaderWrapper);
+        }, 1000);
+    };
 }
 
 Array.from(workNodes).forEach((workItem) => {
