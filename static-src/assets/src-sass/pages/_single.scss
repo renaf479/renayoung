@@ -28,17 +28,18 @@
   .single__imagesLeft {
     min-width: var(--overscan);
     flex: 0 0 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 
     .image__left {
       animation: .37s ease-out 0s 1 galleryLoad forwards;
       opacity: 0;
       transform: translate(50px, 0);
-      float: left;
-      clear: both;
-      margin: 8px 0;
+      margin: 4px 0;
       max-width: var(--overscanImageWidth);
-      -webkit-mask-image: linear-gradient(to right, rgba(#000, 0.7) 0, rgba(#000, 0.7) 50%, rgba(#000, 1) 50%, rgba(#000, 1) 100%);
+      -webkit-mask-image: linear-gradient(to right, rgba(#000, 0.65) 0, rgba(#000, 0.65) 50%, rgba(#000, 1) 50%, rgba(#000, 1) 100%);
     }
 
   .single__content {
@@ -50,11 +51,29 @@
     }
   }
 
-    .single__title {
+    .single__title,
+    .single__position {
       overflow: hidden;
       white-space: nowrap;
       width: 0;
+    }
+
+    .single__title {
       animation: 2s steps(60, end) .35s 1 typing forwards;
+    }
+
+    .single__position {
+      animation: 2s steps(60, end) .55s 1 typing forwards;
+
+      small {
+        text-align: right;
+      }
+    }
+
+    .single__article {
+      opacity: 0;
+      transform: translate(0, 10px);
+      animation: .65s .6s 1 fadeIn forwards;
     }
 
 @include media(">laptop") {

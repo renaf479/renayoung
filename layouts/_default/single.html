@@ -10,10 +10,11 @@
             {{ end }}
         </aside>
 
-        <article class="single__content">
+        <secion class="single__content">
             <h1 class="single__title" style="color: {{ .Params.primaryColor }}">{{ .Title }}</h1>
-            {{ .Content }}
-        </article>
+            <h2 class="single__position">{{ .Params.Position }} <small>({{ .Params.Year }})</small></h2>
+            <article class="single__article">{{ .Content }}</article>
+        </secion>
 
         {{ if .Params.imagesRight }}
         <aside class="single__imagesRight">

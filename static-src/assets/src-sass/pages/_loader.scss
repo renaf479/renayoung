@@ -21,7 +21,9 @@
   .loader__content {
     position: absolute;
     display: inline-block;
-    font-size: 1.4em;
+    width: 100%;
+    font-size: .9em;
+    padding: 0 16px;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -76,3 +78,21 @@
     .process__run--4 {
       animation: 1s steps(1, end) 2s 1 process forwards;
     }
+
+    .process__run--5 {
+      color: #c0e825;
+      animation: 1s steps(1, end) 2.3s 1 process forwards;
+
+      &:first-letter {
+        color: #f1f1e4;
+      }
+    }
+
+
+@include media(">mobile") {
+  .loader__content {
+    width: auto;
+    padding: 0;
+    font-size: 1.4em;
+  }
+}

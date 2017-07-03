@@ -28,7 +28,7 @@ ignoreFiles = ["\\static-src$"]
 
     [params.social.resume]
         title = "Resume"
-        url = "https://github.com/renaf479"
+        url = "/assets/files/SerenaYoung_CV.pdf"
         slug = "resume"
 
 [taxonomies]

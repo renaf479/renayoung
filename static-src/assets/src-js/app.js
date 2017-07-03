@@ -62,7 +62,7 @@ Array.from(workNodes).forEach((workItem) => {
 
 
 document.addEventListener("DOMContentLoaded", function(){
-    //document.body.classList.add('loading');
+   /* document.body.classList.add('loading');*/
 
     (window.onresize = () => {
         breakpoint.refreshValue();
@@ -72,9 +72,9 @@ document.addEventListener("DOMContentLoaded", function(){
     workModalWrapper.getElementsByClassName('modal__close')[0].addEventListener('mouseup', _closeWorkModal);
     contactModalWrapper.getElementsByClassName('modal__close')[0].addEventListener('mouseup', _closeContactModal);
 
-    loaderCallbackNode.addEventListener("webkitAnimationEnd", _loaderComplete, false);
+/*    loaderCallbackNode.addEventListener("webkitAnimationEnd", _loaderComplete, false);
     loaderCallbackNode.addEventListener("animationend", _loaderComplete, false);
-    loaderCallbackNode.addEventListener("oanimationend", _loaderComplete, false);
+    loaderCallbackNode.addEventListener("oanimationend", _loaderComplete, false);*/
 });
 
 
