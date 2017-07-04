@@ -2,15 +2,17 @@
     <div class="about__line"></div>
 </div>
 <div class="about__content section__content">
-    {{range where .Site.Pages "Type" "=" "about"}}
-    <h2 class="section__title about__title">{{ .Title }}</h2>
+
+    <h2 class="section__title about__title">{{ .Site.Params.about.title }}</h2>
     <div class="about__profile">
-        <img src="/assets/images/about-temp.jpg" class="profile__image"/>
+        <img src="{{ .Site.Params.about.image }}" class="profile__image"/>
         <div class="profile__border"></div>
     </div>
+    {{range where .Site.Pages "Type" "=" "about"}}
     <article class="about__bio">
         {{ .Content }}
     </article>
+    {{ end }}
     <a href="{{ .Site.Params.social.resume.url }}" class="about__resume" target="_blank" title="{{ .Site.Params.social.resume.title }}">
         <svg class="svg svg__resume" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 160 160" xml:space="preserve">
@@ -119,5 +121,4 @@
             </g>
         </svg>
     </a>
-    {{ end }}
 </div>

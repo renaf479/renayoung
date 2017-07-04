@@ -10,7 +10,6 @@ const loaderCallbackNode = document.getElementById('loader__callback');
 
 let workNodes = worksWrapper.getElementsByClassName('timeline__item__svg');
 let workModalIframe = workModalWrapper.getElementsByClassName('single__iframe')[0];
-
 let breakpoint = {};
 
 breakpoint.refreshValue = function () {
@@ -33,7 +32,7 @@ function _closeWorkModal() {
 
 function _openContactModal() {
     if(breakpoint.value === 'mobile') {
-        console.log('here');
+        window.open(contactModalIframeNode.dataset.src, '_blank');
     } else {
         Avgrund.show('.contact__modal');
     }
@@ -43,17 +42,25 @@ function _closeContactModal() {
     Avgrund.hide('.contact__modal');
 }
 
-function _loaderComplete() {
-    contactModalIframeNode.src = contactModalIframeNode.dataset.src;
-    contactModalIframeNode.onload = () => {
-        window.scrollTo(0, 0);
-        loaderWrapper.classList.add('hidden--animated');
-        document.body.classList.remove('loading');
+function _loaderCleanup() {
+    loaderWrapper.classList.add('hidden--animated');
+    document.body.classList.remove('loading');
 
-        setTimeout(function() {
-            document.body.removeChild(loaderWrapper);
-        }, 1000);
-    };
+    setTimeout(function() {
+        document.body.removeChild(loaderWrapper);
+    }, 1000);
+}
+
+function _loaderComplete() {
+    window.scrollTo(0, 0);
+    if(breakpoint.value === 'mobile') {
+        _loaderCleanup();
+    } else {
+        contactModalIframeNode.src = contactModalIframeNode.dataset.src;
+        contactModalIframeNode.onload = () => {
+            _loaderCleanup();
+        };
+    }
 }
 
 Array.from(workNodes).forEach((workItem) => {
@@ -62,7 +69,7 @@ Array.from(workNodes).forEach((workItem) => {
 
 
 document.addEventListener("DOMContentLoaded", function(){
-   /* document.body.classList.add('loading');*/
+    document.body.classList.add('loading');
 
     (window.onresize = () => {
         breakpoint.refreshValue();
@@ -72,18 +79,7 @@ document.addEventListener("DOMContentLoaded", function(){
     workModalWrapper.getElementsByClassName('modal__close')[0].addEventListener('mouseup', _closeWorkModal);
     contactModalWrapper.getElementsByClassName('modal__close')[0].addEventListener('mouseup', _closeContactModal);
 
-/*    loaderCallbackNode.addEventListener("webkitAnimationEnd", _loaderComplete, false);
+    loaderCallbackNode.addEventListener("webkitAnimationEnd", _loaderComplete, false);
     loaderCallbackNode.addEventListener("animationend", _loaderComplete, false);
-    loaderCallbackNode.addEventListener("oanimationend", _loaderComplete, false);*/
+    loaderCallbackNode.addEventListener("oanimationend", _loaderComplete, false);
 });
-
-
-
-
-
-//DEBUG
-/*avgrundIframe.src = '/works/ibm';
-avgrundIframe.onload = function() {
-    Avgrund.show('.avgrund-popup');
-}*/
-

@@ -1,4 +1,6 @@
 .works {
+  --works-bgColor: #ffffff;
+  --works-height: 1270px;
   transition: height .5s ease;
   z-index: 110;
 }
@@ -223,10 +225,6 @@
 }
 
 @include media(">laptop") {
-  .works {
-    //margin-top: calc(var(--about-height) * .6 * -1);
-
-  }
 }
 
 @include media(">desktop") {

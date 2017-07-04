@@ -1,4 +1,9 @@
 .contact {
+  --contact-bgColor: #642b73;
+  --contact-bgColor-secondary: #c6426e;
+  --contact-height: 500px;
+  --contact-height-mobile: 400px;
+
   height: var(--contact-height-mobile);
 }
 
@@ -86,11 +91,15 @@
     }
 }
 
-
 @include media(">laptop") {
-  .contact {
-  }
 }
 
 @include media(">desktop") {
+}
+
+@-moz-document url-prefix() {
+  .contact__link .svg {
+    margin: 0 auto;
+    display: block;
+  }
 }

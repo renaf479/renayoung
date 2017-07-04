@@ -120,6 +120,8 @@
 }
 
 .landing {
+  --landing-bgColor: #c04848;
+  --landing-bgColor-secondary: #480048;
   background: var(--landing-bgColor);
   background: linear-gradient(to top, var(--landing-bgColor), var(--landing-bgColor-secondary));
   transition: height .5s ease;
@@ -129,7 +131,7 @@
   .landing__content {
     position: relative;
     width: 100%;
-    max-width: var(--site-content-width);
+    max-width: 700px;
     margin: 0 auto;
     display: block;
   }
@@ -186,7 +188,7 @@
   }
 
   .safie__tail {
-    transform-origin: 100% 0%;
+    transform-origin: 465.1px 279px;
     animation: safie-tail 7s infinite;
   }
 
@@ -224,13 +226,41 @@
 
   .plant {
     .leaf--right {
-      transform-origin: 0% 50%;
       animation: leaves-right 8s infinite;
     }
 
     .leaf--left {
-      transform-origin: 100% 100%;
       animation: leaves-left 8s infinite;
+    }
+
+    .leaf__layer__1 {
+      .leaf--right {
+        transform-origin: 438.85px 203.9px;
+      }
+
+      .leaf--left {
+        transform-origin: 437.75px 203.9px;
+      }
+    }
+
+    .leaf__layer__2 {
+      .leaf--right {
+        transform-origin: 439.15px 215.8px;
+      }
+
+      .leaf--left {
+        transform-origin: 437.35px 215.8px;
+      }
+    }
+
+    .leaf__layer__3 {
+      .leaf--right {
+        transform-origin: 439.15px 229.1px;
+      }
+
+      .leaf--left {
+        transform-origin: 437.35px 229.1px;
+      }
     }
   }
 
@@ -238,4 +268,44 @@
 }
 
 @include media(">desktop") {
+}
+
+@-moz-document url-prefix() {
+  .pace__eyes {
+    .pace__eyes__left {
+      transform-origin: 242.25px 51.9px;
+    }
+
+    .pace__eyes__right {
+      transform-origin: 255.85px 51.9px;
+    }
+  }
+
+  .pace__tail {
+    transform-origin: 198.25px 56.9px;
+  }
+
+  .tea {
+    .tea__steam__large {
+      transform-origin: 79.55px 228.5px;
+    }
+
+    .tea__steam__small {
+      transform-origin: 94.85px 247.6px;
+    }
+  }
+
+  .serena__eyes {
+    .serena__eyes--left {
+      transform-origin: 217.35px 140.2px;
+    }
+
+    .serena__eyes--right {
+      transform-origin: 248.85px 142.1px;
+    }
+  }
+
+  .serena__leg__shoe {
+    transform-origin: 311.477px 429.1px;
+  }
 }

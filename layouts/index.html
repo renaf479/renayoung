@@ -4,9 +4,9 @@
         {{ partial "head.html" . }}
     </head>
     <body class="body">
-<!--        <section id="loader" class="loader">
+        <section id="loader" class="loader">
             {{ partial "loader.html" . }}
-        </section>-->
+        </section>
         <div class="site__content">
             <section class="landing section__wrapper">
                 {{ partial "landing.html" . }}
@@ -23,6 +23,6 @@
         {{ partial "footer.html" . }}
         </div>
         {{ partial "modal.html" . }}
-        <script type="text/javascript" src="assets/js/app.js"></script>
+        {{ partial "scripts.html" }}
     </body>
 </html>

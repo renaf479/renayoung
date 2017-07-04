@@ -1,4 +1,4 @@
-baseURL = "http://www.renayoung.com/"
+baseURL = "http://www.serenayoung.com/"
 title = "Serena Young | Portfolio"
 languageCode = "en-us"
 ignoreFiles = ["\\static-src$"]
@@ -7,6 +7,10 @@ ignoreFiles = ["\\static-src$"]
 
     [params.landing]
         title = "Serena Young"
+
+    [params.about]
+        title = "About Me"
+        image = "/assets/images/about/about.jpg"
 
     [params.works]
         title = "Works"
