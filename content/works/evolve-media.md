@@ -15,4 +15,4 @@ During the gradual rollout of our new inhouse ads in the first year, we've achie
 
 In addition to providing industry standard ad products, we also developed new types of ads. Such as one that combined a cinemagraph with parallax effects as show below. Mouse or tilt your device.
 
-<iframe src="http://localhost:1313/assets/demo/evolve/discovery/" class="single__embed" frameborder="0" width="100%" height="800px" style="margin: 0 auto; display: block;"></iframe>
+<iframe src="/assets/demo/evolve/discovery/" class="single__embed" frameborder="0" width="100%" height="800px" style="margin: 0 auto; display: block;"></iframe>
