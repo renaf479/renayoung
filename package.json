@@ -10,7 +10,7 @@
     "build": "npm run assets:build && hugo",
     "run:hugo": "hugo server",
     "css:sass": "node-sass ./static-src/assets/src-sass/main.scss -o ./static/assets/css/ --source-map=true",
-    "css:postcss": "postcss -u autoprefixer -b < ./static/assets/css/main.css | postcss -u cssnano --sourcemap > ./static/assets/css/main.min.css",
+    "css:postcss": "postcss -u autoprefixer -b 'last 2 versions' <./static/assets/css/main.css | postcss -u cssnano > ./static/assets/css/main.min.css",
     "css:build": "npm run css:sass && npm run css:postcss",
     "css:watch": "onchange \"./static-src/assets/src-sass/**/*.scss\" -- npm run css:build",
     "js:lint": "eslint ./static-src/assets/src-js/ || true",

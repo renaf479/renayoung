@@ -9,11 +9,6 @@
 }
 
 .single__iframe {
-  --overscan: 100px;
-  --overscanMargin: calc(var(--overscan) * -1);
-  --overscanImageWidth: 200px;
-  --overscanImageOpacity: .8;
-
   border: 0 none;
   width: 100%;
   height: 100%;
@@ -33,7 +28,7 @@
       opacity: 0;
       transform: translate(50px, 0);
       margin: 4px 0;
-      max-width: var(--overscanImageWidth);
+      max-width: 200px;
       -webkit-mask-image: linear-gradient(to right, rgba(#000, 0.65) 0, rgba(#000, 0.65) 50%, rgba(#000, 1) 50%, rgba(#000, 1) 100%);
     }
 
@@ -93,16 +88,20 @@
 
 @include media(">laptop") {
   .single__iframe {
-    width: calc(100% + var(--overscan) + var(--scrollbar-baseUnit) + 4px);
-    margin-left: var(--overscanMargin);
+    width: calc(100% + 100px + var(--scrollbar-baseUnit) + 4px);
+    margin-left: -100px;
   }
 
   .single__imagesLeft {
-    min-width: var(--overscan);
     flex: 0 0 100px;
     display: flex;
     flex-direction: column;
     justify-content: center;
   }
+}
 
+@supports (-ms-ime-align:auto) {
+  .single__imagesLeft {
+    min-width: auto;
+  }
 }

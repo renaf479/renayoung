@@ -4,6 +4,7 @@
         {{ partial "head.html" . }}
     </head>
     <body class="body">
+        <aside class="site__ie">{{ .Site.Params.meta.ie }}</aside>
         <section id="loader" class="loader">
             {{ partial "loader.html" . }}
         </section>

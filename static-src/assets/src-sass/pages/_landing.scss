@@ -264,12 +264,6 @@
     }
   }
 
-@include media(">laptop") {
-}
-
-@include media(">desktop") {
-}
-
 @-moz-document url-prefix() {
   .pace__eyes {
     .pace__eyes__left {
@@ -308,4 +302,16 @@
   .serena__leg__shoe {
     transform-origin: 311.477px 429.1px;
   }
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .landing {
+    background: #c04848;
+    background: linear-gradient(to top, #c04848, #480048);
+  }
+
+    .landing__content {
+      width: 800px;
+      height: 600px;
+    }
 }

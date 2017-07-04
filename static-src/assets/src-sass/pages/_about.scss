@@ -1,5 +1,11 @@
 .about {
+  --about-slant: .2;
+  --about-slant-mobile: .05;
+
+
   --about-bgColor: #000000;
+  --aboutTR: calc(100% * var(--about-slant-mobile));
+  --aboutBR: calc(100% * (1 - var(--about-slant-mobile)));
   color: var(--white);
   margin-top: -100px;
   z-index: 100;
@@ -7,14 +13,12 @@
 }
 
   .about__bg {
-    --aboutTR: calc(100% * var(--about-slant-mobile));
-    --aboutBR: calc(100% * (1 - var(--about-slant-mobile)));
     position: absolute;
     z-index: 0;
     width: 100%;
     height: 100%;
     background-color: var(--about-bgColor);
-    clip-path: polygon(0 0, 100% var(--aboutTR), 100% 100%, 0 var(--aboutBR));
+    clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 95%);
     transition: clip-path .2s;
   }
 
@@ -44,8 +48,7 @@
         border: 4px solid var(--white);
       }
 
-    .about__bio {
-    }
+    .about__bio {}
 
     .about__resume {
       visibility: hidden;
@@ -63,11 +66,6 @@
         }
       }
 
-      .svg__resume {
-        width: 100%;
-      }
-    }
-
       .resume--default,
       .resume--hover {
         transform-origin: 50% 50%;
@@ -78,16 +76,19 @@
         transform: scale(0, 0);
       }
 
+      .svg__resume {
+        width: 100%;
+      }
+    }
 
-@include media(">mobile") {
+@media (min-width: $breakpoint-mobile) {
   .about {
     margin-top: calc(var(--about-height) * var(--about-slant) * -1);
     height: var(--about-height);
   }
 
     .about__bg {
-      --aboutTR: calc(100% * var(--about-slant));
-      --aboutBR: calc(100% * (1 - var(--about-slant)));
+      clip-path: polygon(0 0, 100% 20%, 100% 100%, 0 80%);
       width: var(--site-width-max);
       left: 50%;
       transform: translate(-50%, 0);
@@ -124,65 +125,156 @@
               "resume bio bio";
     }
 
-    .about__title {
-      grid-area: header;
-      background-image: linear-gradient(3deg, #ffffff 0%, #ffffff 46%, #000000 46%, #000000 100%);
-      color: transparent;
-      -webkit-background-clip: text;
-      background-clip: text;
-    }
-
-    .about__profile {
-      position: relative;
-      grid-area: profile;
-      shape-outside: none;
-      width: 100%;
-      height: auto;
-      float: none;
-      margin: 0;
-
-    }
-
-      .profile__image {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        z-index: 10;
-        border-radius: 0;
-        border: none;
-        width: 95%;
-        height: 95%;
-        clip-path: polygon(0 5%, 100% 0, 100% 95%, 0% 100%);
+      .about__title {
+        grid-area: header;
+        background-image: linear-gradient(3deg, #ffffff 0%, #ffffff 46%, #000000 46%, #000000 100%);
+        color: transparent;
+        -webkit-background-clip: text;
+        background-clip: text;
       }
 
-      .profile__border {
-        position: absolute;
-        top: 0;
-        z-index: 0;
-        background-color: var(--white);
+      .about__profile {
+        position: relative;
+        grid-area: profile;
+        shape-outside: none;
         width: 100%;
-        height: 100%;
-        clip-path: polygon(3% 10%, 100% 0, 97% 93%, 0% 100%);
+        height: auto;
+        float: none;
+        margin: 0;
+      }
+
+        .profile__image {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          z-index: 10;
+          border-radius: 0;
+          border: none;
+          width: 95%;
+          height: 95%;
+          clip-path: polygon(0 5%, 100% 0, 100% 95%, 0% 100%);
+        }
+
+        .profile__border {
+          position: absolute;
+          top: 0;
+          z-index: 0;
+          background-color: var(--white);
+          width: 100%;
+          height: 100%;
+          clip-path: polygon(3% 10%, 100% 0, 97% 93%, 0% 100%);
+        }
+
+      .about__bio {
+        grid-area: bio;
+      }
+
+      .about__resume {
+        visibility: visible;
+        grid-area: resume;
+        justify-self: center;
+        margin-top: -30px;
+      }
+}
+
+@media (min-width: $breakpoint-laptop) {
+  .about__title {
+    background-image: linear-gradient(3.5deg, #ffffff 0%, #ffffff 47%, #000000 47%, #000000 100%);
+  }
+}
+
+@supports (-ms-ime-align:auto) {
+  .about {}
+
+  .about__bg {
+    top: 108px;
+    transform: skew(0, 3.3deg) translate(-50%, 0);
+  }
+
+  .about__content {
+    display: block;
+  }
+
+    .about__profile {
+      width: 250px;
+      height: 300px;
+      display: inline-block;
+    }
+
+      .profile__border {
+        transform: skew(0, -3deg);
       }
 
     .about__bio {
-      grid-area: bio;
+      display: inline-block;
+      width: 550px;
+      padding: 0 16px;
     }
 
     .about__resume {
-      visibility: visible;
-      grid-area: resume;
-      justify-self: center;
-      margin-top: -30px;
+      positioN: relative;
+      z-index: 100;
+      margin-left: 105px;
+
+      &:hover {
+        .resume--default {
+          opacity: 0;
+        }
+        .resume--hover {
+          opacity: 1;
+        }
+      }
+
+      .resume--default,
+      .resume--hover {
+        transition: transform .34s;
+      }
     }
 }
 
-@include media(">laptop") {
-    .about__title {
-      background-image: linear-gradient(3.5deg, #ffffff 0%, #ffffff 47%, #000000 47%, #000000 100%);
-    }
-}
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .about {
+    margin-top: 0;
+    color: white;
+  }
 
-@include media(">desktop") {
+    .about__bg {
+      background-color: #000;
+      clip-path: none;
+
+      .about__line {
+        display: none;
+      }
+    }
+
+    .about__content {
+      display: block;
+      margin: 0 auto;
+      width: 850px;
+      height: 450px;
+    }
+
+      .about__title {
+        background: transparent;
+        color: white;
+      }
+
+    .about__profile {
+      width: 250px;
+      height: 300px;
+      display: inline-block;
+    }
+
+    .about__resume {
+      position: relative;
+      z-index: 100;
+      margin: -50px 0 0 100px;
+    }
+
+    .about__bio {
+      display: inline-block;
+      width: 550px;
+      padding: 0 16px;
+    }
 }

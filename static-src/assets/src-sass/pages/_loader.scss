@@ -3,8 +3,8 @@
     height: 0;
   }
   100% {
-    height: inherit;
-    line-height: inherit;
+    height: 32px;
+    line-height: 32px;
     visibility: visible;
   }
 }
@@ -90,7 +90,7 @@
     }
 
 
-@include media(">mobile") {
+@media (min-width: $breakpoint-mobile) {
   .loader__content {
     width: auto;
     padding: 0;

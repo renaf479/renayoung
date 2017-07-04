@@ -5,6 +5,13 @@ ignoreFiles = ["\\static-src$"]
 
 [params]
 
+    [params.meta]
+        title = "Serena Young"
+        type = "website"
+        url = "http://serenayoung.com"
+        description = "Frontend Web Developer. And I also make things"
+        ie = "This site was optimized for modern browsers. Please try Chrome, Safari, Firefox, or IE Edge for a better experience."
+
     [params.landing]
         title = "Serena Young"
 

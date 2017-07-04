@@ -87,7 +87,7 @@
     }
 
 
-@include media(">mobile") {
+@media (min-width: $breakpoint-mobile) {
   .work__modal {
     width: 80%;
     max-width: 800px;
@@ -100,7 +100,7 @@
   }
 
   .modal__bg__base {
-    clip-path: polygon(0 0, calc(100% - var(--closeBtnUnit)) 0, 100% var(--closeBtnUnit), 100% 100%, 0 100%);
+    clip-path: polygon(0 0, calc(100% - 32px) 0, 100% 32px, 100% 100%, 0 100%);
   }
 
   .modal__close {
@@ -118,10 +118,63 @@
   }
 }
 
-@include media(">laptop") {
+@supports (-ms-ime-align:auto) {
+  .modal__close {
+    background-color: transparent;
+    width: 32px;
+    height: 32px;
 
+    &:before {
+      position: absolute;
+      content: '';
+      top: 0;
+      right: 0;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 0 32px 32px 0;
+      border-color: transparent #ffffff transparent transparent;
+    }
+
+    &:hover {
+      background-color: transparent;
+
+      &:before {
+        border-color: transparent #D50000 transparent transparent;
+      }
+    }
+  }
 }
 
-@include media(">desktop") {
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .modal__bg__base {
+    background-color: white;
+  }
 
+  .modal__close {
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+
+    &:before {
+      position: absolute;
+      content: '';
+      top: 0;
+      right: 0;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 0 32px 32px 0;
+      border-color: transparent #ffffff transparent transparent;
+    }
+
+    &:hover {
+      background-color: transparent;
+      color: white;
+
+      &:before {
+        border-color: transparent #D50000 transparent transparent;
+      }
+    }
+  }
 }
