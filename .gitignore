@@ -1,3 +1,12 @@
-.sass-cache
-node_modules
-.idea
+about
+imagesleft
+positions
+primarycolor
+slugs
+static-src
+years
+
+main.css
+main.css.map
+
+app.js
