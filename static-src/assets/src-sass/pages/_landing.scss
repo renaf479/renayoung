@@ -120,10 +120,8 @@
 }
 
 .landing {
-  --landing-bgColor: #c04848;
-  --landing-bgColor-secondary: #480048;
-  background: var(--landing-bgColor);
-  background: linear-gradient(to top, var(--landing-bgColor), var(--landing-bgColor-secondary));
+  background: $landingBgColor;
+  background: linear-gradient(to top, $landingBgColor, $landingBgColorSecondary);
   transition: height .5s ease;
   z-index: 50;
 }

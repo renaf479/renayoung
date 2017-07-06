@@ -1,12 +1,5 @@
 .about {
-  --about-slant: .2;
-  --about-slant-mobile: .05;
-
-
-  --about-bgColor: #000000;
-  --aboutTR: calc(100% * var(--about-slant-mobile));
-  --aboutBR: calc(100% * (1 - var(--about-slant-mobile)));
-  color: var(--white);
+  color: $colorWhite;
   margin-top: -100px;
   z-index: 100;
   transition: clip-path .2s, height .2s;
@@ -17,7 +10,7 @@
     z-index: 0;
     width: 100%;
     height: 100%;
-    background-color: var(--about-bgColor);
+    background-color: $aboutBgColor;
     clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 95%);
     transition: clip-path .2s;
   }
@@ -28,7 +21,7 @@
 
     .about__title {
       background: transparent;
-      color: var(--white);
+      color: $colorWhite;
     }
 
     .about__profile {
@@ -45,7 +38,7 @@
         height: 100%;
         object-fit: cover;
         border-radius: 100%;
-        border: 4px solid var(--white);
+        border: 4px solid $colorWhite;
       }
 
     .about__bio {}
@@ -83,13 +76,12 @@
 
 @media (min-width: $breakpoint-mobile) {
   .about {
-    margin-top: calc(var(--about-height) * var(--about-slant) * -1);
-    height: var(--about-height);
+    height: $aboutHeight;
   }
 
     .about__bg {
       clip-path: polygon(0 0, 100% 20%, 100% 100%, 0 80%);
-      width: var(--site-width-max);
+      width: $bodyWidth;
       left: 50%;
       transform: translate(-50%, 0);
 
@@ -160,7 +152,7 @@
           position: absolute;
           top: 0;
           z-index: 0;
-          background-color: var(--white);
+          background-color: $colorWhite;
           width: 100%;
           height: 100%;
           clip-path: polygon(3% 10%, 100% 0, 97% 93%, 0% 100%);

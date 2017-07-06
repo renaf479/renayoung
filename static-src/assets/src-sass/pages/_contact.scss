@@ -1,18 +1,13 @@
 .contact {
-  --contact-bgColor: #642b73;
-  --contact-bgColor-secondary: #c6426e;
-  --contact-height: 500px;
-  --contact-height-mobile: 400px;
-
-  height: var(--contact-height-mobile);
+  height: $contactHeightMobile;
 }
 
   .contact__bg {
     position: absolute;
     width: 100%;
     height: 100%;
-    background: var(--contact-bgColor);
-    background: linear-gradient(to top, var(--contact-bgColor), var(--contact-bgColor-secondary));
+    background: $contactBgColor;
+    background: linear-gradient(to top, $contactBgColor, $contactBgColorSecondary);
     clip-path: polygon(0 0, 100% 5%, 100% 5%, 100% 100%, 0% 100%);
     transition: clip-path .2s;
   }
@@ -20,7 +15,7 @@
 
   .contact__title {
     text-align: center;
-    color: var(--white);
+    color: $colorWhite;
   }
 
   .connect__wrapper {
@@ -85,7 +80,7 @@
 
 @media (min-width: $breakpoint-mobile) {
   .contact {
-    height: var(--contact-height);
+    height: $contactHeight;
   }
 
   .contact__bg {
@@ -93,7 +88,7 @@
   }
 
   .contact__title {
-    color: var(--black);
+    color: $colorBlack;
   }
 
     .contact__cta {
@@ -107,11 +102,11 @@
 @supports (-ms-ime-align:auto) {
   .contact {
     z-index: 200;
-    height: var(--contact-height-mobile);
+    height: $contactHeightMobile;
   }
 
   .contact__title {
-    color: var(--white);
+    color: $colorWhite;
   }
 }
 

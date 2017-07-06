@@ -1,3 +1,4 @@
+/*
 .icon__svg {
   --transition-time: .3s;
   &:hover {
@@ -24,7 +25,7 @@
 }
 
 .icon__border--secondary {
-  fill: var(--black);
+  fill: $colorBlack;
   stroke: var(--white);
   stroke-width: 5px;
 }
@@ -48,7 +49,7 @@
 
     .linkedin--i,
     .linkedin--l {
-      fill: var(--black);
+      fill: $colorBlack;
     }
   }
 }
@@ -68,4 +69,4 @@
       opacity: 1;
     }
   }
-}
+}*/

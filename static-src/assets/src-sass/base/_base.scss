@@ -9,8 +9,8 @@ html {
 }
 
   ::-webkit-scrollbar {
-    width: var(--scrollbar-baseUnit);
-    height: var(--scrollbar-baseUnit);
+    width: $scrollbarBaseUnit;
+    height: $scrollbarBaseUnit;
   }
 
   ::-webkit-scrollbar-button {
@@ -20,7 +20,7 @@ html {
 
   ::-webkit-scrollbar-thumb {
     background-color: rgba(#000, .5);
-    border-radius: calc(var(--scrollbar-baseUnit)/2);
+    border-radius: 3px;
   }
 
   ::-webkit-scrollbar-thumb:hover {
@@ -33,7 +33,7 @@ html {
 
   ::-webkit-scrollbar-track {
     background: rgba(#fff, .8);
-    border-radius: calc(var(--scrollbar-baseUnit)/2);
+    border-radius: 3px;
   }
 
   ::-webkit-scrollbar-track:hover {

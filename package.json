@@ -7,7 +7,7 @@
     "start": "npm run assets:build && npm-run-all css:build js:build && npm-run-all -p css:watch js:watch svg:watch run:hugo",
     "assets:clean": "rm -rf ./static/assets/js/* static/assets/css/* ./public/*",
     "assets:build": "npm run assets:clean && npm-run-all css:build js:build",
-    "build": "npm run assets:build && hugo",
+    "build": "npm run assets:build && hugo -d publish",
     "run:hugo": "hugo server",
     "css:sass": "node-sass ./static-src/assets/src-sass/main.scss -o ./static/assets/css/ --source-map=true",
     "css:postcss": "postcss -u autoprefixer -b 'last 2 versions' <./static/assets/css/main.css | postcss -u cssnano > ./static/assets/css/main.min.css",

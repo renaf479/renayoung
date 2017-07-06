@@ -6,7 +6,7 @@ body {
 }
 
 .body {
-  background-color: var(--site-bgColor);
+  background-color: $bodyBgColor;
 
   &.loading {
     overflow: hidden;
@@ -20,7 +20,7 @@ body {
 
 .site__content {
   position: relative;
-  background-color: var(--bgColor);
+  background-color: $contentBgColor;
   width: 98%;
   max-width: 100%;
   overflow-x: hidden;
@@ -71,7 +71,7 @@ body {
   }
 
   .section__content {
-    width: var(--site-content-width);
+    width: $contentWidth;
   }
 }
 

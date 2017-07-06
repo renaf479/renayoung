@@ -1,6 +1,4 @@
 .works {
-  --works-bgColor: #ffffff;
-  --works-height: 1270px;
   transition: height .5s ease;
   z-index: 110;
 }
@@ -10,7 +8,7 @@
     z-index: 0;
     width: 100%;
     height: 100%;
-    background-color: var(--works-bgColor);
+    background-color: $worksBgColor;
     clip-path: polygon(0 10%, 100% 25%, 100% 70%, 0% 85%);
     transition: clip-path .2s;
   }
@@ -70,18 +68,18 @@
   }
 
     .timeline__item__svg {
-      --transitionTime: .27s;
+
       width: 75px;
       cursor: pointer;
 
       .svg__logo {
-        transition: fill var(--transitionTime);
+        transition: fill $worksTransitionDuration;
       }
 
       .svg__hover {
         transform-origin: 50% 50%;
         transform: scale(0);
-        transition: transform var(--transitionTime);
+        transition: transform $worksTransitionDuration;
       }
 
       &:hover {
@@ -99,7 +97,7 @@
 
     .svg__synth:hover {
       .svg__logo {
-        fill: var(--white);
+        fill: $colorWhite;
       }
     }
 
@@ -107,7 +105,7 @@
       .logo__evolve--evolve,
       .logo__evolve--slash,
       .logo__evolve--media {
-        fill: var(--white);
+        fill: $colorWhite;
       }
     }
 
@@ -115,14 +113,14 @@
       .svg__logo {
         & > circle,
         & > path {
-          fill: var(--white);
+          fill: $colorWhite;
         }
       }
     }
 
     .svg__ibm:hover {
       .svg__logo {
-        fill: var(--white);
+        fill: $colorWhite;
       }
     }
 
@@ -149,7 +147,7 @@
 .company__post {
   width: inherit;
   height: inherit;
-  background-color: var(--white);
+  background-color: $colorWhite;
   padding: 0 50px;
   margin: 0 auto;
   box-shadow: 0px 0px 20px rgba( 0, 0, 0, 0.6 );
@@ -158,12 +156,12 @@
 @media (min-width: $breakpoint-mobile) {
 
   .works {
-    height: var(--works-height);
-    margin-top: calc(var(--about-height) * var(--about-slant) * -1);
+    height: $worksHeight;
+    margin-top: -110px;
   }
 
   .works__bg {
-    background-color: var(--works-bgColor);
+    background-color: $worksBgColor;
     clip-path: polygon(0 10%, 100% 15%, 100% 70%, 0% 75%);
   }
 

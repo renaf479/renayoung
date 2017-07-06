@@ -139,15 +139,14 @@ function _loaderCleanup() {
 
 function _loaderComplete() {
     window.scrollTo(0, 0);
-    _loaderCleanup();
-/*    if(breakpoint.value === 'mobile') {
+    if(breakpoint.value === 'mobile') {
         _loaderCleanup();
     } else {
         contactModalIframeNode.src = contactModalIframeNode.dataset.src;
         contactModalIframeNode.onload = () => {
             _loaderCleanup();
         };
-    }*/
+    }
 }
 
 Array.from(workNodes).forEach((workItem) => {

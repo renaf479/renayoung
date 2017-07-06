@@ -14,7 +14,6 @@
 }
 
 .modal {
-  --closeBtnUnit: 32px;
   position: fixed;
   height: 90vh;
   left: 50%;
@@ -31,13 +30,13 @@
   }
 
   .modal__bg__base {
-    background-color: var(--bgColor);
+    background-color: $contentBgColor;
     z-index: 0;
     clip-path: polygon(0 0, 90% 0, 100% 10%, 100% 100%, 0 100%);
   }
 
   .modal__bg {
-    background-color: var(--white);
+    background-color: $colorWhite;
     z-index: 10;
     clip-path: polygon(0 15%, 100% 30%, 100% 75%, 0% 90%);
   }
@@ -52,9 +51,9 @@
     position: absolute;
     top: 0;
     right: 0;
-    color: var(--black);
+    color: $colorBlack;
     font-weight: bold;
-    background-color: var(--bgColor);
+    background-color: $contentBgColor;
     width: 10.1%;
     height: 10.1%;
     border: none;
@@ -63,8 +62,8 @@
     transition: transform .17s linear, color .17s linear, background-color .17s linear, top .17s linear, right .17s linear;
 
     &:hover {
-      background-color: var(--red);
-      color: var(--white);
+      background-color: $colorRed;
+      color: $colorWhite;
       transform: scale(1.2);
       top: -.5%;
       right: -.5%;
@@ -72,7 +71,7 @@
 
     &:active {
       outline: none;
-      background-color: var(--red-400);
+      background-color: $colorRed400;
       top: -.2%;
       right: -.2%;
       transform: scale(1.1);
@@ -104,8 +103,8 @@
   }
 
   .modal__close {
-    width: calc(var(--closeBtnUnit) + 1px);
-    height: calc(var(--closeBtnUnit) + 1px);
+    width: 32px;
+    height: 32px;
     &:hover {
       transform: scale(1.3);
     }
