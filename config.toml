@@ -1,7 +1,7 @@
 baseURL = "http://www.serenayoung.com/"
 title = "Serena Young | Portfolio"
 languageCode = "en-us"
-ignoreFiles = ["\\static-src$"]
+ignoreFiles = ["\\static-src$", "\\main.sass.css$", "\\main.sass.css.map$"]
 
 [params]
 

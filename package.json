@@ -11,9 +11,10 @@
     "publish": "npm run assets:build && npm run hugo:publish",
     "hugo:serve": "hugo server",
     "hugo:publish": "hugo -d ./publish",
-    "css:dev": "npm run css:sass",
-    "css:sass": "node-sass ./static-src/assets/src-sass/main.scss -o ./static/assets/css/ --source-map=true",
-    "css:build": "npm run css:sass && postcss -u autoprefixer -b 'last 2 versions' <./static/assets/css/main.css | postcss -u cssnano > ./static/assets/css/main.css",
+    "css:autoprefixer": "postcss ./static/assets/css/main.sass.css -u autoprefixer -o ./static/assets/css/main.css",
+    "css:dev": "npm run css:sass && npm run css:autoprefixer",
+    "css:sass": "node-sass ./static-src/assets/src-sass/main.scss ./static/assets/css/main.sass.css --source-map=true",
+    "css:build": "npm run css:dev && postcss ./static/assets/css/main.css -u cssnano -r",
     "css:watch": "onchange \"./static-src/assets/src-sass/**/*.scss\" -- npm run css:dev",
     "js:lint": "eslint ./static-src/assets/src-js/ || true",
     "js:uglify": "uglifyjs-folder ./static/assets/js -m -o ./static/assets/js/app.js",
@@ -21,11 +22,7 @@
     "js:babel": "babel ./static-src/assets/src-js --out-file ./static/assets/js/app.js",
     "js:build": "npm run js:babel && npm run js:uglify",
     "js:dev": "npm run js:babel",
-    "js:watch": "onchange \"./static-src/assets/src-js/**/*.js\" -- npm run js:dev",
-    "svg:compress": "svgo -f ./static-src/assets/src-svg/raw -o ./static-src/assets/src-svg/compressed",
-    "svg:sprite": "svg-sprite-generate -d ./static-src/assets/src-svg/compressed -o ./themes/renayoung/layouts/partials/icons.svg",
-    "svg:build": "npm run svg:compress && npm run svg:sprite",
-    "svg:watch": "onchange './static-src/assets/src-svg/raw/**/*.svg' -- npm run svg:build"
+    "js:watch": "onchange \"./static-src/assets/src-js/**/*.js\" -- npm run js:dev"
   },
   "repository": {
     "type": "git",
@@ -61,8 +58,6 @@
     "rollup-plugin-node-resolve": "^3.0.0",
     "source-map": "0.5.6",
     "stylelint": "^7.10.1",
-    "svg-sprite-generator": "0.0.7",
-    "svgo": "^0.7.2",
     "uglify-js": "2.8.22",
     "uglifyjs-folder": "^1.1.0"
   }
