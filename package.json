@@ -12,7 +12,7 @@
     "hugo:serve": "hugo server",
     "hugo:publish": "hugo -d ./publish",
     "css:autoprefixer": "postcss ./static/assets/css/main.sass.css -u autoprefixer -o ./static/assets/css/main.css",
-    "css:dev": "node-sass ./static-src/assets/src-sass/main.scss --source-map=true && postcss -u autoprefixer -o ./static/assets/css/main.css",
+    "css:dev": "node-sass ./static-src/assets/src-sass/main.scss | postcss -u autoprefixer > ./static/assets/css/main.css",
     "css:sass": "node-sass ./static-src/assets/src-sass/main.scss ./static/assets/css/main.sass.css --source-map=true",
     "css:build": "npm run css:dev && postcss ./static/assets/css/main.css -u cssnano -r",
     "css:watch": "onchange \"./static-src/assets/src-sass/**/*.scss\" -- npm run css:dev",

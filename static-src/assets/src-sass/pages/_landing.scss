@@ -165,10 +165,12 @@
     }
 
     .tea__steam__large {
+      transform-box: fill-box;
       animation: tea-steam 5s infinite;
     }
 
     .tea__steam__small {
+      transform-box: fill-box;
       animation: tea-steam 8s .4s infinite;
     }
   }
@@ -191,6 +193,7 @@
   }
 
   .pace__tail {
+    transform-box: fill-box;
     transform-origin: 100% 100%;
     animation: safie-tail 3s .5s infinite;
   }
@@ -198,6 +201,7 @@
   .pace__eyes {
     .pace__eyes__left,
     .pace__eyes__right {
+      transform-box: fill-box;
       animation: cat-eyes-blink 5s infinite;
     }
   }
@@ -205,6 +209,7 @@
   .serena__eyes {
     .serena__eyes--left,
     .serena__eyes--right {
+      transform-box: fill-box;
       animation: serena-eyes 7s 1s infinite;
     }
   }
@@ -219,6 +224,7 @@
   }
 
   .serena__leg__shoe {
+    transform-box: fill-box;
     animation: serena-shoe 20s infinite;
   }
 
